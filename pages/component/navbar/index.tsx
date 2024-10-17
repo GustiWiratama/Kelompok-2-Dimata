@@ -11,7 +11,7 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li className="pl-4 pr-4 hover:text-orange-700 cursor-pointer">
-              About
+              <Link href="/">About</Link>
             </li>
             <li className="pl-4 pr-4 hover:text-orange-700 cursor-pointer">
               <Link href="../services">Services</Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
               <Link href="../projects">Projects</Link>
             </li>
             <li className="pl-4 pr-4 hover:text-orange-700 cursor-pointer">
-              Contact
+              <Link href="/">Contact</Link>
             </li>
             <li className="pl-6 pr-6 flex text-center items-center justify-center  bg-orange-400 h-10">
               Login

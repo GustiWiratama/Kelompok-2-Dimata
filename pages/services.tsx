@@ -8,25 +8,25 @@ export default function Services() {
       title: "Web Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/webDev.png", // Ganti dengan path gambar yang sesuai
+      image: "/webDev.png",
     },
     {
       title: "Mobile Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/mobileDev.png", // Ganti dengan path gambar yang sesuai
+      image: "/mobileDev.png",
     },
     {
       title: "Internet Of Things",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/internet.png", // Ganti dengan path gambar yang sesuai
+      image: "/internet.png",
     },
     {
       title: "Artificial Intelligence",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/ai.png", // Ganti dengan path gambar yang sesuai
+      image: "/ai.png",
     },
   ];
   return (
@@ -35,17 +35,16 @@ export default function Services() {
       <div className="relative z-10">
         <Navbar />
       </div>
-      <div className="relative z-10 p-20 text-white text-center">
-        <h1 className="text-6xl">SERVICES</h1>
+      <div className="relative z-10 p-14 text-white text-center">
+        <h1 className="text-6xl font-bold">SERVICES</h1>
       </div>
       <div className="absolute inset-0 z-1">
         <Image
-          src="/services.png"
+          src="/services1.png"
           alt="Services Image"
-          width={2000}
-          height={1000}
+          width={3000}
+          height={2000}
           priority
-          className=""
         />
       </div>
       <div className=" relative  mt-72 flex flex-col text-center items-center">
