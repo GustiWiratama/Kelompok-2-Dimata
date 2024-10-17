@@ -6,22 +6,26 @@ export default function Services() {
   const cards = [
     {
       title: "Web Development",
-      description: "This is the description for card 1.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
       image: "/webDev.png", // Ganti dengan path gambar yang sesuai
     },
     {
       title: "Mobile Development",
-      description: "This is the description for card 2.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
       image: "/mobileDev.png", // Ganti dengan path gambar yang sesuai
     },
     {
       title: "Internet Of Things",
-      description: "This is the description for card 3.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
       image: "/internet.png", // Ganti dengan path gambar yang sesuai
     },
     {
       title: "Artificial Intelligence",
-      description: "This is the description for card 4.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
       image: "/ai.png", // Ganti dengan path gambar yang sesuai
     },
   ];
