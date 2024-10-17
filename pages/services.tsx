@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Footer from "./component/footer";
 import Navbar from "./component/navbar";
 
 export default function Services() {
@@ -75,6 +76,7 @@ export default function Services() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
