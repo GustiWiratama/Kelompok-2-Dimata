@@ -11,6 +11,41 @@ export default function Product() {
       description: "Asset Management System",
       image: "/Content.png",
     },
+    {
+      title: "ProChain",
+      description: "Asset Management System",
+      image: "/Content.png",
+    },
+    {
+      title: "ProChain",
+      description: "Asset Management System",
+      image: "/Content.png",
+    },
+    {
+      title: "ProChain",
+      description: "Asset Management System",
+      image: "/Content.png",
+    },
+    {
+      title: "ProChain",
+      description: "Asset Management System",
+      image: "/Content.png",
+    },
+    {
+      title: "ProChain",
+      description: "Asset Management System",
+      image: "/Content.png",
+    },
+    {
+      title: "ProChain",
+      description: "Asset Management System",
+      image: "/Content.png",
+    },
+    {
+      title: "ProChain",
+      description: "Asset Management System",
+      image: "/Content.png",
+    },
   ];
   return (
     <div className="relative">
@@ -40,6 +75,19 @@ export default function Product() {
         </p>
         <div>
           <SubNavbar />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {cards.map((card, index) => (
+            <div key={index} className="">
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={350}
+                height={150}
+                className="w-full h-50 object-cover"
+              ></Image>
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
