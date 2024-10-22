@@ -31,23 +31,26 @@ export default function Services() {
   ];
   return (
     <div className="relative">
-      <title>Services</title>
-      <div className="relative z-10">
-        <Navbar />
-      </div>
-      <div className="relative z-10 p-14 text-white text-center">
-        <h1 className="text-6xl font-bold">SERVICES</h1>
-      </div>
-      <div className="absolute inset-0 z-1">
+      <div className="relative w-full h-[50vh]">
         <Image
           src="/services1.png"
-          alt="Services Image"
-          width={3000}
-          height={2000}
+          alt="service Image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          quality={100}
           priority
         />
+
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <Navbar />
+        </div>
+
+        <div className="absolute inset-0 z-10 flex justify-center items-center">
+          <h1 className="text-6xl text-white font-bold mt-10">SERVICES</h1>
+        </div>
       </div>
-      <div className=" relative  mt-72 flex flex-col text-center items-center">
+      <div className=" relative  mt-40 flex flex-col text-center items-center">
         <div className="font-bold text-4xl mb-4">
           Innovative solutions for every step forward
         </div>
@@ -60,10 +63,7 @@ export default function Services() {
       <div className="max-w-screen-lg mx-auto p-4 mt-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {cards.map((card, index) => (
-            <div
-              key={index}
-              className="bg-white  shadow-md overflow-hidden transition-transform duration-200 hover:scale-105"
-            >
+            <div key={index} className="bg-white  shadow-md overflow-hidden">
               <Image
                 src={card.image}
                 alt={card.title}
