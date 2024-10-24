@@ -11,9 +11,9 @@ const Footer = () => {
         Schedule Here
       </button>
 
-      <section className=" bg-[#2D3E98] text-white py-10 mt-40">
+      <section className=" bg-[#2D3E98] text-white py-10 px-20 mt-40">
         <div className="container mx-auto px-4 md:px-8 flex flex-wrap justify-between">
-          <div className="flex flex-col text-start w-full md:w-1/3 mb-8 md:mb-0 ">
+          <div className="flex flex-col text-start w-full md:w-2/6 mb-8 md:mb-0 ">
             <h2 className="text-2xl font-bold mb-4">DIMATA</h2>
             <p className="mb-2">
               Jl. Danau Tempe No.21A, Sidakarya,
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-2/3 flex flex-wrap text-start justify-end">
-            <div className="w-1/3 mb-8">
+            <div className="w-1/4 mb-8">
               <h3 className="text-xl font-semibold mb-4">Company</h3>
               <ul>
                 <li>
@@ -74,7 +74,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="w-1/3 mb-8">
+            <div className="w-1/4 mb-8">
               <h3 className="text-xl font-semibold mb-4">Resource</h3>
               <ul>
                 <li>
@@ -99,7 +99,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-1/3 mb-8">
+            <div className="w-1/4 mb-8">
               <h3 className="text-xl font-semibold mb-4">Legal</h3>
               <ul>
                 <li>
@@ -121,7 +121,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="pt-7 text-center text-sm">
+        <div className="pt-10 text-center text-sm">
           <p>© 2024 Dimata. All rights reserved.</p>
         </div>
       </section>
