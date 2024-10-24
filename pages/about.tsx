@@ -123,11 +123,11 @@ export default function About() {
           quality={100}
           priority
         />
-        <div className="absolute m-32 z-30 flex flex-col justify-center text-center">
+        <div className="absolute m-20 z-30 flex flex-col justify-center text-center">
           <hr className=" text-white w-16 h-0.5 my-1 mx-auto" />
           <h1 className=" text-white text-2xl">Vision and Mission</h1>
         </div>
-        <div className="absolute top-2 left-0 z-30 w-full h-full flex justify-center items-center">
+        <div className="absolute top-10 left-0 z-30 w-full h-full flex justify-center items-center">
           <div className="absolute left-0 z-30 w-full h-full flex justify-center items-center gap-10">
             <div className=" w-1/3 h-1/2 bg-white text-center justify-center p-4">
               <p>
@@ -163,8 +163,9 @@ export default function About() {
       <div className="text-left m-48">
         <div className="flex justify-between">
           <div>
-            <hr className="w-9 bg-indigo-900 h-0.5 " />
-            <p>Our Team</p>
+            <hr className="w-24 bg-indigo-900 h-0.5 " />
+            <p className="text-xl">OUR TEAM</p>
+            <br />
             <p className="text-5xl">
               <b>The Minds Behind Dimata</b>
             </p>
@@ -182,7 +183,14 @@ export default function About() {
                 currentIndex === 0 ? "opacity-50" : "opacity-100"
               }`}
             >
-              Prev
+              <Image
+                src="/about/prev.png"
+                alt="about Image"
+                width={30}
+                height={30}
+                quality={100}
+                priority
+              />
             </button>
             <button
               onClick={handleNext}
@@ -193,25 +201,37 @@ export default function About() {
                   : "opacity-100"
               }`}
             >
-              Next
+              <Image
+                src="/about/next.png"
+                alt="about Image"
+                width={30}
+                height={30}
+                quality={100}
+                priority
+              />
             </button>
           </div>
         </div>
+
         {/* Profile Slider Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
-          {profile.slice(currentIndex, currentIndex + 4).map((card, index) => (
-            <div key={index} className="">
-              <Image
-                src={card.image}
-                alt={card.name}
-                width={350}
-                height={150}
-                className="w-full h-50 object-cover"
-              />
-            </div>
-          ))}
+        <div className="overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 25}%)` }} // Adjust to 25% per card
+          >
+            {profile.map((card, index) => (
+              <div key={index} className="min-w-[25%] px-2">
+                <Image
+                  src={card.image}
+                  alt={card.name}
+                  width={350}
+                  height={150}
+                  className="w-full h-50 object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        {/* Prev and Next Button */}
       </div>
 
       <Footer />
