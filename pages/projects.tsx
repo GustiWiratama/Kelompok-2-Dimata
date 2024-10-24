@@ -20,7 +20,7 @@ export default function Projects() {
           <Navbar />
         </div>
         <div className="absolute inset-0 z-10 flex justify-center items-center">
-          <h1 className="text-6xl text-white">PROJECTS</h1>
+          <h1 className="text-5xl text-white font-semibold mt-10">PROJECTS</h1>
         </div>
       </div>
       <div className=" relative  mt-72 flex flex-col text-center items-center">
