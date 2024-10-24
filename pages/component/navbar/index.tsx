@@ -3,7 +3,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div>
-      <nav className="flex w-full justify-between p-10 px-20 text-2xl items-center bg-transparent text-white ">
+      <nav className="flex w-full justify-between p-10 px-28 text-xl items-center bg-transparent text-white ">
         <Link href="/">
           <div className="title text-3xl font-bold ">DIMATA</div>
         </Link>
