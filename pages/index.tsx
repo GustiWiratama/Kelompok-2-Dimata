@@ -28,7 +28,9 @@ export default function Home() {
           </div>
         </div>
       </header>
-        
+      <div>
+        <ul></ul>
+      </div>
       <Footer />
     </div>
   );
