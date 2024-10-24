@@ -8,46 +8,49 @@ export default function Services() {
       title: "Web Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/webDev.png",
+      image: "/services/webDev.png",
     },
     {
       title: "Mobile Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/mobileDev.png",
+      image: "/services/mobileDev.png",
     },
     {
       title: "Internet Of Things",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/internet.png",
+      image: "/services/internet.png",
     },
     {
       title: "Artificial Intelligence",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/ai.png",
+      image: "/services/ai.png",
     },
   ];
   return (
     <div className="relative">
-      <title>Services</title>
-      <div className="relative z-10">
-        <Navbar />
-      </div>
-      <div className="relative z-10 p-14 text-white text-center">
-        <h1 className="text-6xl font-bold">SERVICES</h1>
-      </div>
-      <div className="absolute inset-0 z-1">
+      <div className="relative w-full h-[50vh]">
         <Image
-          src="/services1.png"
-          alt="Services Image"
-          width={3000}
-          height={2000}
+          src="/services/services1.png"
+          alt="service Image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          quality={100}
           priority
         />
+
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <Navbar />
+        </div>
+
+        <div className="absolute inset-0 z-10 flex justify-center items-center">
+          <h1 className="text-5xl text-white font-semibold mt-10">SERVICES</h1>
+        </div>
       </div>
-      <div className=" relative  mt-72 flex flex-col text-center items-center">
+      <div className=" relative  mt-40 flex flex-col text-center items-center">
         <div className="font-bold text-4xl mb-4">
           Innovative solutions for every step forward
         </div>

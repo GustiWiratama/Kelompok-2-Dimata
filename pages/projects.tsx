@@ -1,24 +1,39 @@
 import Image from "next/image";
 import Footer from "./component/footer";
 import Navbar from "./component/navbar";
+import SubNavbar from "./component/subNavbar";
 
 export default function Projects() {
   return (
     <div>
-      <div className="relative z-10">
-        <Navbar />
-      </div>
-      <div className="relative z-10 p-20 text-white text-center">
-        <h1 className="text-6xl font-bold">PROJECTS</h1>
-      </div>
-      <div className="absolute inset-0 z-1">
+      <div className="relative w-full h-[50vh]">
         <Image
           src="/nav-img.png"
-          alt="Project Image"
-          width={2000}
-          height={1000}
+          alt="projects Image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          quality={100}
           priority
         />
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <Navbar />
+        </div>
+        <div className="absolute inset-0 z-10 flex justify-center items-center">
+          <h1 className="text-5xl text-white font-semibold mt-10">PROJECTS</h1>
+        </div>
+      </div>
+      <div className=" relative  mt-72 flex flex-col text-center items-center">
+        <div className="font-bold text-4xl mb-4">
+          Transforming ideas into impactful solutions for our clients
+        </div>
+        <p className="w-4/6 text-slate-400">
+          Explore our impressive portfolio that have been successfully delivered
+          to our clients.{" "}
+        </p>
+        <div>
+          <SubNavbar />
+        </div>
       </div>
       <section className="container mx-auto pt-10">
         <div className="grid grid-cols-1 md:grid-cols-2">

@@ -38,7 +38,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       {/* Our Services Section */}
       <div className="container mx-auto py-10">
         <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen">
@@ -160,8 +159,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-
-      <Footer />
     </div>
   );
 }
