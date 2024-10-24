@@ -4,23 +4,23 @@ const SubNavbar = () => {
   return (
     <div>
       <ul className="flex">
-        <li className="p-5 hover:text-cyan-950 cursor-pointer">
+        <li className="p-5 hover:text-blue-800 cursor-pointer">
           <Link href="#">All</Link>
         </li>
-        <li className="p-5 hover:text-cyan-950 cursor-pointer">
+        <li className="p-5 hover:text-blue-800 cursor-pointer">
           <Link href="#">Web</Link>
         </li>
-        <li className="p-5 hover:text-cyan-950 cursor-pointer">
+        <li className="p-5 hover:text-blue-800 cursor-pointer">
           <Link href="#">Mobile</Link>
         </li>
-        <li className="p-5 hover:text-cyan-950 cursor-pointer">
+        <li className="p-5 hover:text-blue-800 cursor-pointer">
           <Link href="#">Dekstop</Link>
         </li>
-        <li className="p-5 hover:text-cyan-950 cursor-pointer">
-          <Link href="#">Iot</Link>
+        <li className="p-5 hover:text-blue-800 cursor-pointer">
+          <Link href="#">IoT</Link>
         </li>
-        <li className="p-5 hover:text-cyan-950 cursor-pointer">
-          <Link href="#">Ai</Link>
+        <li className="p-5 hover:text-blue-800 cursor-pointer">
+          <Link href="#">AI</Link>
         </li>
       </ul>
     </div>
