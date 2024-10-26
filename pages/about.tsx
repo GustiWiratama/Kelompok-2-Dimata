@@ -88,24 +88,27 @@ export default function About() {
       </div>
 
       {/* Section untuk Our Story */}
-      <div className="gap-20 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
-        <div className="w-[20%]">
+      <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
+        <div className="w-[30%]">
           <Image
             src="/about/about-picture.png"
             alt="about Image"
-            width={2000}
-            height={1000}
+            width={3000}
+            height={2000}
             quality={100}
             priority
           />
         </div>
         <hr />
-        <div className="flex flex-col max-w-3xl">
+        <div className="flex flex-col max-w-2xl">
           <hr className="w-9 bg-indigo-900 h-0.5 " />
-          <span className="text-indigo-900 font-medium ">OUR STORY</span>
-          <h1 className="text-4xl font-bold font-sans ">
+          <span className="text-xl text-indigo-900 font-medium ">
+            OUR STORY
+          </span>
+          <h1 className="text-5xl font-bold font-sans ">
             Turning visions into reality.
           </h1>
+          <br />
           <p className="w-full text-sm">
             Dimata IT Solutions was founded in 2002 with a vision to develop
             smart information systems using the latest technologies. We have
@@ -129,29 +132,36 @@ export default function About() {
         </div>
         <div className="absolute top-10 left-0 z-30 w-full h-full flex justify-center items-center">
           <div className="absolute left-0 z-30 w-full h-full flex justify-center items-center gap-10">
-            <div className=" w-1/3 h-1/2 bg-white text-center justify-center p-4">
+            <div className="px-10 w-1/3 h-1/2 bg-white text-center justify-center p-4">
               <p>
+                <br />
+                <br />
                 <br />
                 <b className="text-5xl">VISION</b>
                 <hr className=" w-72 bg-indigo-900 h-1 my-4 mx-auto" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-                  sint nisi perferendis adipisci doloribus laudantium nihil
-                  facere alias molestias, assumenda omnis tenetur quasi
-                  molestiae quibusdam sunt soluta. Ut, aperiam nostrum.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
+                  dolorem quisquam iste totam consectetur dolorum laudantium
+                  nulla incidunt eos molestias, aliquid alias enim blanditiis
+                  laborum id est voluptatum! Molestias fugit autem tempora
+                  placeat veritatis facilis doloribus accusantium? Officia, ad
+                  fugit.
                 </p>
               </p>
             </div>
-            <div className="w-1/3 h-1/2 bg-white text-center justify-center p-4">
+            <div className="px-10 w-1/3 h-1/2 bg-white text-center justify-center p-4">
               <p>
+                <br />
+                <br />
                 <br />
                 <b className="text-5xl">MISSION</b>
                 <hr className=" w-72 bg-indigo-900 h-1 my-4 mx-auto" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-                  sint nisi perferendis adipisci doloribus laudantium nihil
-                  facere alias molestias, assumenda omnis tenetur quasi
-                  molestiae quibusdam sunt soluta. Ut, aperiam nostrum.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                  dolorem cum necessitatibus nisi dignissimos fugiat animi
+                  veniam aliquam porro. Dignissimos assumenda a cum porro quae,
+                  ad, earum libero quam aperiam ex repellat totam quisquam
+                  eveniet esse ipsam cupiditate temporibus vitae.
                 </p>
               </p>
             </div>
@@ -169,11 +179,13 @@ export default function About() {
             <p className="text-5xl">
               <b>The Minds Behind Dimata</b>
             </p>
+            <br />
             <p>
               Dimata’s success is powered by a passionate team committed to
               innovation, collaboration, and delivering impactful solutions to
               our clients.
             </p>
+            <br />
           </div>
           <div className="flex mt-4">
             <button
@@ -233,7 +245,65 @@ export default function About() {
           </div>
         </div>
       </div>
+      <div className=" flex flex-row bg-slate-100 p-28">
+        <div>
+          <hr className="w-20 h-1 bg-indigo-900 " />
+          <p className="text-indigo-900 text-2xl">OUR EXPERIENCE</p>
+          <br />
+          <p className="text-6xl">
+            <b>Building Success Through Experience</b>
+          </p>
+        </div>
+        <div className="w-1/2 place-content-center flex items-center gap-4">
+          <div className="w-64 border-solid border-2 py-4 border-black text-center">
+            <p className="text-8xl font-bold">20+</p>
+            <p className="text-2xl font-bold">Years of Experience</p>
+          </div>
 
+          {/* Garis Vertikal */}
+          <div className="h-24 border-l-2 border-black"></div>
+
+          <div className="w-64 border-solid border-2 py-4 border-black text-center">
+            <p className="text-8xl font-bold">10+</p>
+            <p className="text-2xl font-bold">Project Completed</p>
+          </div>
+
+          {/* Garis Vertikal */}
+          <div className="h-24 border-l-2 border-black"></div>
+
+          <div className="w-64 border-solid border-2 py-4 border-black text-center">
+            <p className="text-8xl font-bold">15+</p>
+            <p className="text-2xl font-bold">Happy Clients</p>
+          </div>
+        </div>
+      </div>
+      <div className=" flex flex-row gap-32 m-28">
+        <div>
+          <Image
+            src="/about/map.png"
+            alt="about Image"
+            width={1200}
+            height={200}
+            quality={100}
+            priority
+          />
+        </div>
+        <div className="max-w-3xl place-content-center p-16">
+          <hr className="w-20 h-0.5 bg-indigo-900 " />
+          <p className="text-indigo-900 text-1xl">OUR OFFICE</p>
+          <br />
+          <p className="text-6xl">
+            <b>Where Innovation Happens</b>
+          </p>
+          <br />
+          <p>
+            A space built to drive progress and foster creativity. Our modern,
+            tech-forward office reflects our commitment to cutting-edge
+            solutions and provides the ideal environment for innovation and
+            collaboration.
+          </p>
+        </div>
+      </div>
       <Footer />
     </div>
   );
