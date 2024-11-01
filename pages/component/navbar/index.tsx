@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 const Navbar = () => {
   const router = useRouter();
 
-  // Function to check if the current route is active
   const isActive = (path: string) => router.pathname === path;
 
   return (
