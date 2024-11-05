@@ -23,7 +23,7 @@ export default function Projects() {
           <h1 className="text-5xl text-white font-semibold mt-10">PROJECTS</h1>
         </div>
       </div>
-      <div className=" relative  mt-72 flex flex-col text-center items-center">
+      <div className=" relative  mt-44 flex flex-col text-center items-center">
         <div className="font-bold text-4xl mb-4">
           Transforming ideas into impactful solutions for our clients
         </div>
