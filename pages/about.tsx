@@ -28,36 +28,33 @@ export default function About() {
     {
       name: "John Doe",
       potition: "director",
-      image: "/about/Xiangling.jpg",
+      image: "/about/image-20.png",
     },
     {
       name: "John Doe",
       potition: "director",
-      image: "/about/Hu-Tao.jpg",
+      image: "/about/image-20.png",
     },
     {
       name: "John Doe",
       potition: "director",
-      image: "/about/Kequing.jpg",
+      image: "/about/image-20.png",
     },
     {
       name: "John Doe",
       potition: "director",
-      image: "/about/Chiori.jpg",
+      image: "/about/image-20.png",
     },
   ];
 
-  // State untuk mengatur posisi slide saat ini
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fungsi untuk mengatur index ketika tombol next di klik
   const handleNext = () => {
     if (currentIndex < profile.length - 4) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-  // Fungsi untuk mengatur index ketika tombol prev di klik
   const handlePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
@@ -66,7 +63,6 @@ export default function About() {
 
   return (
     <div className="relative min-h-screen flex-col flex-grow">
-      {/* Background image section */}
       <div className="relative w-full h-[50vh] ">
         <Image
           src="/about/about.png"
@@ -77,17 +73,14 @@ export default function About() {
           priority
         />
 
-        {/* Navbar di bagian atas */}
         <div className="absolute top-0 left-0 right-0 z-20 ">
           <Navbar />
         </div>
-        {/* Teks "ABOUT US" di tengah background */}
         <div className="absolute inset-0 z-10 flex justify-center items-center">
-          <h1 className="text-6xl text-white">ABOUT US</h1>
+          <h1 className="text-5xl font-semibold text-white">ABOUT US</h1>
         </div>
       </div>
 
-      {/* Section untuk Our Story */}
       <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
         <div className="w-[30%]">
           <Image
@@ -101,7 +94,7 @@ export default function About() {
         </div>
         <hr />
         <div className="flex flex-col max-w-2xl">
-          <hr className="w-9 bg-indigo-900 h-0.5 " />
+          <hr className="w-9 bg-indigo-900 h-1 mb-2 " />
           <span className="text-xl text-indigo-900 font-medium ">
             OUR STORY
           </span>
@@ -169,11 +162,10 @@ export default function About() {
         </div>
       </div>
 
-      {/* Our Team Section */}
       <div className="text-left m-48">
         <div className="flex justify-between">
           <div>
-            <hr className="w-24 bg-indigo-900 h-0.5 " />
+            <hr className="w-24 bg-indigo-900 h-1 mb-2 " />
             <p className="text-xl">OUR TEAM</p>
             <br />
             <p className="text-5xl">
@@ -225,11 +217,10 @@ export default function About() {
           </div>
         </div>
 
-        {/* Profile Slider Section */}
         <div className="overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 25}%)` }} // Adjust to 25% per card
+            style={{ transform: `translateX(-${currentIndex * 25}%)` }}
           >
             {profile.map((card, index) => (
               <div key={index} className="min-w-[25%] px-2">
@@ -247,7 +238,7 @@ export default function About() {
       </div>
       <div className=" flex flex-row bg-slate-100 p-28">
         <div>
-          <hr className="w-20 h-1 bg-indigo-900 " />
+          <hr className="w-14 mb-2 h-1 bg-indigo-900 " />
           <p className="text-indigo-900 text-2xl">OUR EXPERIENCE</p>
           <br />
           <p className="text-6xl">
@@ -289,8 +280,8 @@ export default function About() {
           />
         </div>
         <div className="max-w-3xl place-content-center p-16">
-          <hr className="w-20 h-0.5 bg-indigo-900 " />
-          <p className="text-indigo-900 text-1xl">OUR OFFICE</p>
+          <hr className="w-20 mb-2 h-1 bg-indigo-900 " />
+          <p className="text-indigo-900 text-2xl">OUR OFFICE</p>
           <br />
           <p className="text-6xl">
             <b>Where Innovation Happens</b>
