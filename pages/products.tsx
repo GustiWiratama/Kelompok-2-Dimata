@@ -64,7 +64,7 @@ export default function Product() {
           <Navbar />
         </div>
         <div className="absolute inset-0 z-10 flex justify-center items-center">
-          <h1 className="text-6xl text-white font-semibold mt-10">PRODUCT</h1>
+          <h1 className="text-5xl text-white font-semibold mt-10">PRODUCT</h1>
         </div>
       </div>
       <div className=" relative mt-40 flex flex-col text-center items-center">
