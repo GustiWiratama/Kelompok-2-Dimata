@@ -3,7 +3,7 @@ import Link from "next/link";
 const SubNavbar = () => {
   return (
     <div>
-      <ul className="flex">
+      <ul className="flex text-xl">
         <li className="p-5 hover:text-blue-800 cursor-pointer">
           <Link href="#">All</Link>
         </li>
