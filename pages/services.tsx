@@ -50,8 +50,8 @@ export default function Services() {
           <h1 className="text-5xl font-semibold text-white mt-10 ">SERVICES</h1>
         </div>
       </div>
-      <div className=" relative  mt-40 flex flex-col text-center items-center">
-        <div className="font-bold text-4xl mb-4">
+      <div className=" relative mt-12 sm:mt-40 flex flex-col text-center items-center">
+        <div className="font-bold text-2xl sm:text-4xl px-5 sm:px-0 mb-4">
           Innovative solutions for every step forward
         </div>
         <p className="w-4/6">
