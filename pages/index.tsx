@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
+
       <header
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: "url('/meeting.png')" }}
@@ -423,8 +424,13 @@ export default function Home() {
                 key={index}
                 className="border border-gray-300 rounded overflow-hidden group"
               >
-                <summary className="bg-white p-4 font-semibold cursor-pointer hover:bg-gray-50 group-open:text-blue-600 group-open:bg-white">
+                <summary className="bg-white p-4 font-semibold cursor-pointer hover:bg-gray-50 group-open:text-blue-600 group-open:bg-white flex items-center justify-between">
                   {faq.question}
+                  <img
+                    src="/Vector.png"
+                    alt="Arrow icon"
+                    className="ml-2 transform transition-transform group-open:-rotate-90 w-4 h-4"
+                  />
                 </summary>
                 <div className="p-4 bg-white text-gray-600 group-open:text-gray-600">
                   {faq.answer}
