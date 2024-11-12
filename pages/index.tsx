@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Footer from "./component/footer";
 import Navbar from "./component/navbar";
-
 export default function Home() {
   return (
     <>
@@ -10,59 +9,125 @@ export default function Home() {
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: "url('/meeting.png')" }}
       >
-        <Navbar />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <Navbar />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="text-center text-white px-4">
-            <h1 className="text-6xl font-bold mb-4">
+            <h1 className="text-5xl font-semibold mb-4">
               SMART SOFTWARE <br /> SOLUTIONS
             </h1>
-            <p className="text-2xl mb-6">
+            <p className="text-2xl mb-6 italic lora">
               "Transform your business with our innovative information systems"
             </p>
             <a
               href="#consultation"
-              className="bg-orange-500 text-white py-3 px-6 rounded-lg hover:bg-orange-600 transition"
+              className="bg-orange-500 bg-opacity-70 text-white py-3 px-6  hover:bg-orange-600 transition"
             >
               Book Free Consultation
             </a>
           </div>
         </div>
       </header>
+      {/* marquee */}
+      <section className="pt-20">
+        <div className="overflow-hidden whitespace-nowrap">
+          <div className="flex animate-marquee">
+            <div className="mx-14">
+              <Image
+                src="/home/ProSaas.png"
+                alt="ProSaas"
+                width={150}
+                height={50}
+              />
+            </div>
+            <div className="mx-14">
+              <Image
+                src="/home/No1city.png"
+                alt="No1 City"
+                width={150}
+                height={50}
+              />
+            </div>
+            <div className="mx-14">
+              <Image
+                src="/home/mata.png"
+                alt="ProSaas"
+                width={150}
+                height={50}
+              />
+            </div>
+            <div className="mx-14">
+              <Image
+                src="/home/brand.svg"
+                alt="No1 City"
+                width={150}
+                height={50}
+              />
+            </div>
+            <div className="mx-14">
+              <Image
+                src="/home/tech.png"
+                alt="No1 City"
+                width={150}
+                height={50}
+              />
+            </div>
+          </div>
+        </div>
 
-      <div className="container mx-auto py-8">
+        <style jsx>{`
+          .animate-marquee {
+            animation: marquee 15s linear infinite;
+          }
+
+          @keyframes marquee {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        `}</style>
+      </section>
+      <div className="container mx-auto pb-8">
         {/* About Section */}
-        <div className="max-w-6xl mx-auto gap-10 flex flex-row mb-8 p-8 bg-white text-black">
-          <div className="w-7/12">
+        <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
+          <div className="w-full mx-auto px-5">
             <Image
               src="/about/about-picture.png"
-              alt="About Image"
-              width={2000}
-              height={1000}
+              alt="about Image"
+              width={3000}
+              height={2000}
               quality={100}
               priority
-              className="w-full h-auto"
             />
           </div>
-          <div className="flex flex-col max-w-3xl">
-            <hr className="w-9 bg-indigo-900 h-0.5 mb-2" />
-            <span className="text-indigo-900 font-medium">OUR STORY</span>
-            <h1 className="text-4xl font-bold mb-2">
+          <hr />
+          <div className="flex flex-col max-w-2xl">
+            <hr className="w-9 bg-indigo-900 h-1 mb-2 " />
+            <span className="text-xl text-indigo-900 font-medium ">
+              OUR STORY
+            </span>
+            <h1 className="text-5xl font-bold font-sans ">
               Turning visions into reality.
             </h1>
-            <p className="text-sm mb-3">
+            <br />
+            <p className="w-full text-sm">
               Dimata IT Solutions was founded in 2002 with a vision to develop
               smart information systems using the latest technologies. We have
               successfully delivered software solutions for various industries.
             </p>
-            <button className="w-32 h-10 bg-blue-800 text-white hover:bg-blue-800">
+            <button className="w-32 h-12 mt-5 bg-blue-800 text-white hover:bg-gray-700">
               Read More
             </button>
           </div>
         </div>
 
         {/* Services Section */}
-        <section className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center pt-6 pb-6">
-          <div className="lg:w-1/2 pr-4">
+        <section className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center pt-6 pb-6 py-20">
+          <div className="lg:w-1/2 max-w-6xl mx-auto px-8">
             <h2 className="text-sm uppercase text-indigo-900">
               <hr className="bg-indigo-900 h-0.5 w-9" />
               Our Services
@@ -80,19 +145,19 @@ export default function Home() {
           <div className="lg:w-1/2 grid grid-cols-1 gap-4">
             {[
               {
-                src: "/webDev.png",
+                src: "/services/webDev.png",
                 title: "Web Development",
                 description:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
               },
               {
-                src: "/mobileDev.png",
+                src: "/services/mobileDev.png",
                 title: "Mobile Development",
                 description:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
               },
               {
-                src: "/internet.png",
+                src: "/services/internet.png",
                 title: "Internet of Things",
                 description:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -109,7 +174,9 @@ export default function Home() {
                 </div>
                 <div className="w-3/5 flex flex-col">
                   <h4 className="text-lg font-bold">{service.title}</h4>
-                  <p className="text-gray-500">{service.description}</p>
+                  <p className="text-gray-500 text-sm w-[90%]">
+                    {service.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -118,7 +185,7 @@ export default function Home() {
       </div>
 
       {/* Products Section */}
-      <div className="py-12">
+      <div className="py-20">
         <div className="max-w-6xl mx-auto px-8">
           <h2 className="text-sm uppercase text-indigo-900">
             <hr className="bg-indigo-900 h-0.5 w-9" />
@@ -138,36 +205,37 @@ export default function Home() {
             needs.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {Array(6)
-              .fill()
-              .map((_, index) => (
-                <div key={index} className="relative bg-white shadow-lg">
-                  <Image
-                    src="/content.png"
-                    alt="Product"
-                    width={400}
-                    height={256}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-lg font-semibold">
-                    ProChain
-                  </div>
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div key={index} className="relative bg-white shadow-lg">
+                <Image
+                  src="/content.png"
+                  alt="Product"
+                  width={400}
+                  height={256}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-lg font-semibold">
+                  ProChain
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Work With Us Section */}
       <section className="bg-gray-100 py-12">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-8">
           {/* Header Section */}
-          <div className="flex items-start mb-6">
+          <div className="flex justify-between items-start mb-6">
             <div className="text-left">
-              <p className="text-blue-600 font-semibold mb-1">WORK WITH US</p>
-              <h2 className="text-3xl font-bold">Why Choose Us?</h2>
+              <hr className="w-9 bg-indigo-900 h-1 mb-2 " />
+              <span className="text-sm text-indigo-900 font-medium">
+                WORK WITH US
+              </span>
+              <h2 className="text-3xl font-bold  mt-5">Why Choose Us?</h2>
             </div>
-            <div className="text-gray-600 ml-48 mt-1 text-left max-w-lg">
+            <div className="text-gray-600 ml-48 mt-1 text-right max-w-lg">
               Experience our unmatched expertise and dedication to delivering
               exceptional results, tailored to meet your unique needs.
             </div>
@@ -176,7 +244,7 @@ export default function Home() {
           {/* Feature Cards */}
           <div className="grid md:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6  shadow-md">
               <div className="mb-4">
                 <Image
                   src="/ai icon.png"
@@ -196,7 +264,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6  shadow-md">
               <div className="mb-4">
                 <Image
                   src="/fluent_communication-person-20-regular.png"
@@ -216,7 +284,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6  shadow-md">
               <div className="mb-4">
                 <Image
                   src="/arcticons_bejeweled-stars.png"
@@ -240,9 +308,9 @@ export default function Home() {
       {/* Projects Section */}
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-8">
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
+          <div className="grid md:grid-cols-4 gap-6 mb-6">
             {/* Small Square Image Box with Text Overlay */}
-            <div className="relative h-64 w-full bg-gray-300">
+            <div className="relative h-64 w-64 bg-gray-300">
               <Image
                 src="/image (3).png"
                 alt="Love Bali"
@@ -254,16 +322,17 @@ export default function Home() {
                 LOVE BALI
               </div>
             </div>
-
+            <div className="relative h-64 w-64 bg-blue-800"></div>
             {/* Text Section (Flush Left) */}
-            <div className="md:col-span-2 flex flex-col justify-center text-left">
-              <h2 className="text-sm uppercase text-blue-700 mb-2">
-                Our Projects
+            <div className="md:col-span-2 flex flex-col justify-start items-end text-right">
+              <h2 className="text-sm uppercase text-indigo-900 flex flex-col justify-start items-end">
+                <hr className="bg-indigo-900 h-0.5 w-9 items-end" />
+                Our projects
               </h2>
-              <h1 className="text-4xl font-bold text-black mb-4 leading-tight">
+              <h1 className="text-4xl font-bold text-black my-5 leading-tight">
                 Transforming ideas into impactful solutions for our clients.
               </h1>
-              <button className="bg-blue-700 text-white px-4 py-2 hover:bg-blue-600">
+              <button className="w-32 h-12 bg-blue-800 text-white hover:bg-gray-700 ">
                 See All
               </button>
             </div>
@@ -272,6 +341,18 @@ export default function Home() {
           {/* Additional Project Boxes */}
           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {/* Project Image Box 1 */}
+
+            {/* Orange Box */}
+            <div className="flex flex-col">
+              <div className="flex flex-row-reverse">
+                <div className="relative h-32 w-32 bg-orange-500"></div>
+                <div className="relative h-32 w-32 bg-white"></div>
+              </div>
+              <div className="flex flex-row">
+                <div className="relative h-32 w-32 bg-blue-800"></div>
+                <div className="relative h-32 w-32 bg-white"></div>
+              </div>
+            </div>
             <div className="relative h-64 bg-gray-300">
               <Image
                 src="/image1.png"
@@ -285,11 +366,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Orange Box */}
-            <div className="relative h-64 bg-orange-500"></div>
-
             {/* Blue Box */}
-            <div className="relative h-64 bg-blue-800"></div>
+            <div className="relative h-64 bg-orange-500"></div>
 
             {/* Project Image Box 2 */}
             <div className="relative h-64 bg-gray-300">
