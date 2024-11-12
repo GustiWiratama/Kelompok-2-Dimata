@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
+
       <header
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: "url('/meeting.png')" }}
@@ -138,22 +139,20 @@ export default function Home() {
             needs.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {Array(6)
-              .fill()
-              .map((_, index) => (
-                <div key={index} className="relative bg-white shadow-lg">
-                  <Image
-                    src="/content.png"
-                    alt="Product"
-                    width={400}
-                    height={256}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-lg font-semibold">
-                    ProChain
-                  </div>
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div key={index} className="relative bg-white shadow-lg">
+                <Image
+                  src="/content.png"
+                  alt="Product"
+                  width={400}
+                  height={256}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-lg font-semibold">
+                  ProChain
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -345,8 +344,13 @@ export default function Home() {
                 key={index}
                 className="border border-gray-300 rounded overflow-hidden group"
               >
-                <summary className="bg-white p-4 font-semibold cursor-pointer hover:bg-gray-50 group-open:text-blue-600 group-open:bg-white">
+                <summary className="bg-white p-4 font-semibold cursor-pointer hover:bg-gray-50 group-open:text-blue-600 group-open:bg-white flex items-center justify-between">
                   {faq.question}
+                  <img
+                    src="/Vector.png"
+                    alt="Arrow icon"
+                    className="ml-2 transform transition-transform group-open:-rotate-90 w-4 h-4"
+                  />
                 </summary>
                 <div className="p-4 bg-white text-gray-600 group-open:text-gray-600">
                   {faq.answer}
