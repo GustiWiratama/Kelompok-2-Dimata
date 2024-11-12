@@ -131,12 +131,24 @@ export default function About() {
             <div className="px-10 w-1/3 h-1/2 bg-white text-center justify-center p-4">
               <b className="text-5xl">VISION</b>
               <hr className="w-72 bg-indigo-900 h-1 my-4 mx-auto" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
+                dolorem quisquam iste totam consectetur dolorum laudantium nulla
+                incidunt eos molestias, aliquid alias enim blanditiis laborum id
+                est voluptatum! Molestias fugit autem tempora placeat veritatis
+                facilis doloribus accusantium? Officia, ad fugit.
+              </p>
             </div>
             <div className="px-10 w-1/3 h-1/2 bg-white text-center justify-center p-4">
               <b className="text-5xl">MISSION</b>
               <hr className="w-72 bg-indigo-900 h-1 my-4 mx-auto" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
+                dolorem quisquam iste totam consectetur dolorum laudantium nulla
+                incidunt eos molestias, aliquid alias enim blanditiis laborum id
+                est voluptatum! Molestias fugit autem tempora placeat veritatis
+                facilis doloribus accusantium? Officia, ad fugit.
+              </p>
             </div>
           </div>
         </div>
@@ -213,7 +225,36 @@ export default function About() {
           </div>
         </div>
       </div>
+      <div className=" flex flex-row bg-slate-100 p-28">
+        <div>
+          <hr className="w-14 mb-2 h-1 bg-indigo-900 " />
+          <p className="text-indigo-900 text-2xl">OUR EXPERIENCE</p>
+          <br />
+          <p className="text-6xl">
+            <b>Building Success Through Experience</b>
+          </p>
+        </div>
+        <div className="w-1/2 place-content-center flex items-center gap-4">
+          <div className="w-64 border-solid border-2 py-4 border-black text-center">
+            <p className="text-8xl font-bold">20+</p>
+            <p className="text-2xl font-bold">Years of Experience</p>
+          </div>
+          <div className="h-24 border-l-2 border-black"></div>
 
+          <div className="w-64 border-solid border-2 py-4 border-black text-center">
+            <p className="text-8xl font-bold">10+</p>
+            <p className="text-2xl font-bold">Project Completed</p>
+          </div>
+
+          {/* Garis Vertikal */}
+          <div className="h-24 border-l-2 border-black"></div>
+
+          <div className="w-64 border-solid border-2 py-4 border-black text-center">
+            <p className="text-8xl font-bold">15+</p>
+            <p className="text-2xl font-bold">Happy Clients</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-row gap-32 m-28">
         <div className="w-1/2 flex items-center justify-center">
           <iframe
