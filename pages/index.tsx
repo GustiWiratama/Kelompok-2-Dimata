@@ -1,11 +1,57 @@
 import Image from "next/image";
 import Footer from "./component/footer";
 import Navbar from "./component/navbar";
+import { useState, useEffect } from "react";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+
 export default function Home() {
+  const testimonialsData = [
+    {
+      id: 1,
+      name: "Saraswati",
+      role: "Client",
+      message:
+        " Lorem Ipsum is simply dummy text of the printing, typesetting. Lorem Ipsum is simply dummy text of the printing, typesetting. Lorem Ipsum is simply dummy text of the printing, typesetting. Lorem Ipsum is simply dummy text of the printing, typesetting.",
+      imageUrl: "/image/woman.png",
+    },
+    {
+      id: 2,
+      name: "John Doe",
+      role: "Customer",
+      message: "This is a sample testimonial from a satisfied customer.",
+      imageUrl: "/image/woman.png",
+    },
+    {
+      id: 3,
+      name: "Jane Smith",
+      role: "Client",
+      message: "Great service and support. Highly recommend!",
+      imageUrl: "/image/woman.png",
+    },
+    // Add more testimonials as needed
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimonial, setTestimonial] = useState(testimonialsData[0]);
+
+  useEffect(() => {
+    setTestimonial(testimonialsData[currentIndex]);
+  }, [currentIndex]);
+
+  const handleNext = () => {
+    if (currentIndex < testimonialsData.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
   return (
     <>
       {/* Hero Section */}
-
       <header
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: "url('/meeting.png')" }}
@@ -184,7 +230,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-
       {/* Products Section */}
       <div className="py-20">
         <div className="max-w-6xl mx-auto px-8">
@@ -223,7 +268,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Work With Us Section */}
       <section className="bg-gray-100 py-12">
         <div className="max-w-6xl mx-auto px-8">
@@ -311,7 +355,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid md:grid-cols-4 gap-6 mb-6">
             {/* Small Square Image Box with Text Overlay */}
-            <div className="relative h-64 w-64 bg-gray-300">
+            <div className="relative h-64 w-64 bg-gray-300 flex items-center justify-center">
               <Image
                 src="/image (3).png"
                 alt="Love Bali"
@@ -319,7 +363,7 @@ export default function Home() {
                 objectFit="cover"
                 className="opacity-70"
               />
-              <div className="absolute bottom-4 left-4 text-white text-lg font-semibold">
+              <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold">
                 LOVE BALI
               </div>
             </div>
@@ -342,7 +386,6 @@ export default function Home() {
           {/* Additional Project Boxes */}
           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {/* Project Image Box 1 */}
-
             {/* Orange Box */}
             <div className="flex flex-col">
               <div className="flex flex-row-reverse">
@@ -354,16 +397,17 @@ export default function Home() {
                 <div className="relative h-32 w-32 bg-white"></div>
               </div>
             </div>
-            <div className="relative h-64 bg-gray-300">
+            <div className="relative h-64 bg-gray-300 flex items-center justify-center">
               <Image
-                src="/image1.png"
+                src="/image (4).png"
                 alt="Bridgewater Joy Residence"
                 layout="fill"
                 objectFit="cover"
                 className="opacity-70"
               />
-              <div className="absolute bottom-4 left-4 text-white text-lg font-semibold">
-                BRIDGEWATER JOY RESIDENCE
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-lg font-semibold">
+                <div>BRIDGEWATER JOY</div>
+                <div className="text-xl mt-2">RESIDENCE</div>
               </div>
             </div>
 
@@ -371,16 +415,17 @@ export default function Home() {
             <div className="relative h-64 bg-orange-500"></div>
 
             {/* Project Image Box 2 */}
-            <div className="relative h-64 bg-gray-300">
+            <div className="relative h-64 bg-gray-300 flex items-center justify-center">
               <Image
-                src="/image2.png"
+                src="/image (5).png"
                 alt="Pleasantview Gem Inn"
                 layout="fill"
                 objectFit="cover"
                 className="opacity-70"
               />
-              <div className="absolute bottom-4 left-4 text-white text-lg font-semibold">
-                PLEASANTVIEW GEM INN
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-lg font-semibold">
+                <div>PLEASANTVIEW</div>
+                <div className="text-xl mt-2">GEM INN</div>
               </div>
             </div>
           </div>
@@ -389,12 +434,12 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section className="py-12">
-        <div className="max-w-3xl mx-auto px-8">
-          <h2 className="text-indigo-600 text-sm uppercase mb-2">FAQ</h2>
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-indigo-800 text-sm uppercase mb-2">FAQ</h2>
           <h3 className="text-3xl font-bold text-gray-800 mb-8">
             Frequently Asked Questions
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {[
               {
                 question:
@@ -419,27 +464,87 @@ export default function Home() {
                 answer:
                   "You can contact us for a free consultation to discuss your project requirements and explore how we can assist you.",
               },
+              {
+                question: "What industries does Dimata IT Solutions serve?",
+                answer:
+                  "We serve a wide range of industries, including healthcare, finance, education, retail, and technology.",
+              },
+              {
+                question:
+                  "Can Dimata IT Solutions help with custom software development?",
+                answer:
+                  "Yes, we specialize in creating custom software solutions tailored to your business needs.",
+              },
             ].map((faq, index) => (
               <details
                 key={index}
                 className="border border-gray-300 rounded overflow-hidden group"
               >
-                <summary className="bg-white p-4 font-semibold cursor-pointer hover:bg-gray-50 group-open:text-blue-600 group-open:bg-white flex items-center justify-between">
+                <summary className="bg-white p-5 font-semibold cursor-pointer flex items-center justify-between group-open:bg-blue-800 group-open:text-white">
                   {faq.question}
                   <img
+                    src="/Vector (1).png"
+                    alt="Arrow icon closed"
+                    className="ml-2 transition-transform transform group-open:hidden w-5 h-5"
+                  />
+                  <img
                     src="/Vector.png"
-                    alt="Arrow icon"
-                    className="ml-2 transform transition-transform group-open:-rotate-90 w-4 h-4"
+                    alt="Arrow icon open"
+                    className="ml-2 transition-transform transform hidden group-open:block w-5 h-5"
                   />
                 </summary>
-                <div className="p-4 bg-white text-gray-600 group-open:text-gray-600">
-                  {faq.answer}
-                </div>
+                <div className="p-5 bg-white text-gray-600">{faq.answer}</div>
               </details>
             ))}
           </div>
         </div>
       </section>
+
+      <div className="flex pt-16 md:pt-32 font-sans">
+        <div className="flex flex-col lg:flex-row lg:p-32 p-5 justify-between items-center bg-[url('/image/testibg.png')] w-full h-[50vh] lg:h-[90vh] bg-cover bg-center">
+          <div className="flex flex-col items-center lg:items-start justify-start text-white gap-3">
+            <h1 className="text-xl md:text-2xl italic font-medium">
+              TESTIMONIAL
+            </h1>
+            <h1 className="text-2xl md:text-4xl font-bold">
+              What They Say About Us
+            </h1>
+          </div>
+
+          <div className="flex flex-col p-5 gap-5 bg-white w-full max-w-lg lg:max-w-md shadow-lg rounded-lg">
+            <div className="flex flex-row justify-end items-center gap-4">
+              <div className="flex flex-col justify-center items-end">
+                <h1 className="font-bold text-lg md:text-xl">
+                  {testimonial.name}
+                </h1>
+                <p className="text-sm">{testimonial.role}</p>
+              </div>
+              <Image
+                src={testimonial.imageUrl}
+                alt="pp"
+                width={80}
+                height={80}
+                className="rounded-full"
+              />
+            </div>
+            <div className="flex flex-col text-right">
+              <p className="text-sm md:text-base">{testimonial.message}</p>
+            </div>
+            <div className="flex flex-row gap-3 items-center justify-end">
+              <FaArrowLeftLong
+                size={24}
+                className="cursor-pointer"
+                onClick={handlePrevious}
+              />
+              <FaArrowRightLong
+                size={24}
+                className="cursor-pointer"
+                onClick={handleNext}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </>
