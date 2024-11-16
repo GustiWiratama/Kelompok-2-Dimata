@@ -38,7 +38,7 @@ export default function Projects() {
         </div>
       </div>
       <section className="container mx-auto pt-10 px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0">
           <div className="relative">
             <Image
               src="/project1.png"
