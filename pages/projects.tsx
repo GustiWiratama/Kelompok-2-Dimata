@@ -5,8 +5,8 @@ import SubNavbar from "./component/subNavbar";
 
 export default function Projects() {
   return (
-    <div>
-      <div className="relative w-full h-[50vh] sm:h-[40vh] md:h-[60vh]">
+    <div className="relative">
+      <div className="relative w-full h-[50vh]">
         <Image
           src="/nav-img.png"
           alt="projects Image"
@@ -25,11 +25,11 @@ export default function Projects() {
           </h1>
         </div>
       </div>
-      <div className="relative mt-20 sm:mt-32 md:mt-44 flex flex-col text-center items-center px-4 sm:px-6">
-        <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-4">
+      <div className="relative mt-40 flex flex-col text-center items-center">
+        <div className="font-bold text-4xl mb-4">
           Transforming ideas into impactful solutions for our clients
         </div>
-        <p className="w-full sm:w-5/6 md:w-4/6 text-slate-400">
+        <p className="w-4/6 text-gray-700">
           Explore our impressive portfolio that have been successfully delivered
           to our clients.
         </p>
