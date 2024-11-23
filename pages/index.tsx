@@ -1,8 +1,8 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Footer from "./component/footer";
 import Navbar from "./component/navbar";
-import { useState, useEffect } from "react";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 export default function Home() {
   const testimonialsData = [
@@ -485,12 +485,12 @@ export default function Home() {
                   <img
                     src="/Vector (1).png"
                     alt="Arrow icon closed"
-                    className="ml-2 transition-transform transform group-open:hidden w-5 h-5"
+                    className=" transition-transform transform group-open:hidden w-7 h-5"
                   />
                   <img
                     src="/Vector.png"
                     alt="Arrow icon open"
-                    className="ml-2 transition-transform transform hidden group-open:block w-5 h-5"
+                    className=" transition-transform transform hidden group-open:block w-7 h-5"
                   />
                 </summary>
                 <div className="p-5 bg-white text-gray-600">{faq.answer}</div>
