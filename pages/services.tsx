@@ -8,25 +8,25 @@ export default function Services() {
       title: "Web Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/services/webDev.png",
+      image: "/services/web.svg",
     },
     {
       title: "Mobile Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/services/mobileDev.png",
+      image: "/services/mobile.svg",
     },
     {
       title: "Internet Of Things",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/services/internet.png",
+      image: "/services/internet.svg",
     },
     {
       title: "Artificial Intelligence",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?.",
-      image: "/services/ai.png",
+      image: "/services/ai.svg",
     },
   ];
   return (

@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/dimata_it/?hl=en">
                 <img src="/ig.svg" alt="Instagram" className="w-6 h-6" />
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/company/pt-dimata-sora-jayate/">
                 <img src="/linkin.svg" alt="LinkedIn" className="w-6 h-6" />
               </a>
             </div>
