@@ -33,7 +33,7 @@ export default function Services() {
     <div className="relative">
       <div className="relative w-full h-[50vh]">
         <Image
-          src="/services/services1.png"
+          src="/services/jumbo.svg"
           alt="service Image"
           layout="fill"
           objectFit="cover"
