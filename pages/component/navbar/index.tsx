@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -16,7 +17,14 @@ const Navbar = () => {
     <div>
       <nav className="flex w-full justify-between p-10 px-10 sm:px-28 text-xl items-center bg-transparent text-white">
         <Link href="/">
-          <div className="title text-3xl font-bold cursor-pointer">DIMATA</div>
+          <div className="title cursor-pointer w-2/5">
+            <Image
+              src="/nav/dimata-logo.svg"
+              alt="logo"
+              width={500} // lebar gambar
+              height={300} // tinggi gambar
+            />
+          </div>
         </Link>
         <div className="relative">
           {/* Tombol Dropdown */}
