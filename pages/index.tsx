@@ -10,8 +10,7 @@ export default function Home() {
       id: 1,
       name: "Saraswati",
       role: "Client",
-      message:
-        " Lorem Ipsum is simply dummy text of the printing, typesetting. Lorem Ipsum is simply dummy text of the printing, typesetting. Lorem Ipsum is simply dummy text of the printing, typesetting. Lorem Ipsum is simply dummy text of the printing, typesetting.",
+      message: "Lorem Ipsum is simply dummy text of the printing.",
       imageUrl: "/image/woman.png",
     },
     {
@@ -28,7 +27,6 @@ export default function Home() {
       message: "Great service and support. Highly recommend!",
       imageUrl: "/image/woman.png",
     },
-    // Add more testimonials as needed
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,6 +47,39 @@ export default function Home() {
       setCurrentIndex(currentIndex - 1);
     }
   };
+
+  // About Section data
+  const aboutSlides = [
+    {
+      title: "William John Doe.",
+      sectionName: "OUR DIRECTOR", // Nama untuk slide pertama
+      description:
+        "William John Doe is the visionary leader of Dimata IT Solutions, which he founded in 2002. With over 20 years in the IT sector, he drives innovation that enhances client efficiency across various industries. His commitment to accessible technology and a creative workplace has established Dimata as a leader in the tech field..",
+      imageUrl: "/about/about picture (1).svg",
+    },
+    {
+      title: "Turning visions into reality.",
+      sectionName: "OUR SERVICE", // Nama untuk slide kedua
+      description:
+        "Dimata IT Solutions was founded in 2002 with a vision to develop smart information systems using the latest technologies. We have successfully delivered software solutions for various industries.",
+      imageUrl: "/about/Group 43 (1).svg",
+    },
+  ];
+
+  const [aboutIndex, setAboutIndex] = useState(0);
+
+  const handleAboutNext = () => {
+    if (aboutIndex < aboutSlides.length - 1) {
+      setAboutIndex(aboutIndex + 1);
+    }
+  };
+
+  function handleAboutPrevious() {
+    setAboutIndex(
+      (prev) => (prev - 1 + aboutSlides.length) % aboutSlides.length
+    );
+  }
+
   return (
     <>
       {/* Hero Section */}
@@ -64,172 +95,133 @@ export default function Home() {
             <h1 className="text-5xl font-semibold mb-4">
               SMART SOFTWARE <br /> SOLUTIONS
             </h1>
-            <p className="text-2xl mb-6 italic lora">
+            <p className="text-2xl mb-6 italic">
               "Transform your business with our innovative information systems"
             </p>
             <a
-              href="#consultation"
-              className="bg-orange-500 bg-opacity-70 text-white py-3 px-6  hover:bg-orange-600 transition"
+              href="https://web.whatsapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-500 bg-opacity-70 text-white py-3 px-6 hover:bg-orange-600 transition"
             >
               Book Free Consultation
             </a>
           </div>
         </div>
       </header>
-      {/* marquee */}
-      <section className="pt-20">
-        <div className="overflow-hidden whitespace-nowrap">
-          <div className="flex animate-marquee">
-            <div className="mx-14">
-              <Image
-                src="/home/ProSaas.png"
-                alt="ProSaas"
-                width={150}
-                height={50}
-              />
-            </div>
-            <div className="mx-14">
-              <Image
-                src="/home/No1city.png"
-                alt="No1 City"
-                width={150}
-                height={50}
-              />
-            </div>
-            <div className="mx-14">
-              <Image
-                src="/home/mata.png"
-                alt="ProSaas"
-                width={150}
-                height={50}
-              />
-            </div>
-            <div className="mx-14">
-              <Image
-                src="/home/brand.svg"
-                alt="No1 City"
-                width={150}
-                height={50}
-              />
-            </div>
-            <div className="mx-14">
-              <Image
-                src="/home/tech.png"
-                alt="No1 City"
-                width={150}
-                height={50}
-              />
-            </div>
-          </div>
-        </div>
 
-        <style jsx>{`
-          .animate-marquee {
-            animation: marquee 15s linear infinite;
-          }
-
-          @keyframes marquee {
-            0% {
-              transform: translateX(100%);
-            }
-            100% {
-              transform: translateX(-100%);
-            }
-          }
-        `}</style>
-      </section>
       <div className="container mx-auto pb-8">
         {/* About Section */}
-        <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
-          <div className="w-full mx-auto px-5">
-            <Image
-              src="/about/about-picture.png"
-              alt="about Image"
-              width={3000}
-              height={2000}
-              quality={100}
-              priority
-            />
+        <div className="flex flex-col md:flex-row gap-10 m-10 justify-center items-center relative z-20 bg-white text-black p-10">
+          <div className="w-full md:w-1/2 mx-auto px-5">
+            <div className="relative w-full h-500">
+              {" "}
+              {/* Fixed height for consistency */}
+              <Image
+                src={aboutSlides[aboutIndex].imageUrl}
+                alt={`About Image ${aboutIndex + 1}`}
+                width={500}
+                height={500}
+                quality={100}
+                priority
+                className="object-cover transition-opacity duration-300"
+              />
+            </div>
           </div>
-          <hr />
+
           <div className="flex flex-col max-w-2xl">
-            <hr className="w-9 bg-indigo-900 h-1 mb-2 " />
-            <span className="text-xl text-indigo-900 font-medium ">
-              OUR STORY
+            <hr className="w-9 bg-indigo-900 h-1 mb-2" />
+            <span className="text-xl text-indigo-900 font-medium">
+              {aboutSlides[aboutIndex].sectionName}
             </span>
-            <h1 className="text-5xl font-bold font-sans ">
-              Turning visions into reality.
+            <h1 className="text-5xl font-bold font-sans my-4">
+              {aboutSlides[aboutIndex].title}
             </h1>
-            <br />
-            <p className="w-full text-sm">
-              Dimata IT Solutions was founded in 2002 with a vision to develop
-              smart information systems using the latest technologies. We have
-              successfully delivered software solutions for various industries.
+            <p className="w-full text-sm mb-5 leading-loose">
+              {aboutSlides[aboutIndex].description}
             </p>
-            <button className="w-32 h-12 mt-5 bg-blue-800 text-white hover:bg-gray-700">
-              Read More
-            </button>
+            <div className="flex justify-between">
+              <button
+                className="w-32 h-12 bg-blue-800 text-white hover:bg-blue-700 transition disabled:opacity-50"
+                onClick={handleAboutPrevious}
+                disabled={aboutIndex === 0}
+              >
+                Previous
+              </button>
+              <button
+                className={`w-32 h-12 bg-blue-800 text-white hover:bg-blue-700 transition ${
+                  aboutIndex === aboutSlides.length - 1
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
+                }`}
+                onClick={handleAboutNext}
+                disabled={aboutIndex === aboutSlides.length - 1}
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
-
-        {/* Services Section */}
-        <section className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center pt-6 pb-6 py-20">
-          <div className="lg:w-1/2 max-w-6xl mx-auto px-8">
-            <h2 className="text-sm uppercase text-indigo-900">
-              <hr className="bg-indigo-900 h-0.5 w-9" />
-              Our Services
-            </h2>
-            <h1 className="text-4xl font-bold mt-2">
-              Innovative solutions for <br /> every step forward.
-            </h1>
-            <p className="text-lg text-gray-500 mt-2">
-              We provide software solutions for businesses, government, and
-              public services. Our expertise includes integration of digital
-              devices and 4.0 technologies.
-            </p>
-          </div>
-
-          <div className="lg:w-1/2 grid grid-cols-1 gap-4">
-            {[
-              {
-                src: "/services/webDev.png",
-                title: "Web Development",
-                description:
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-              },
-              {
-                src: "/services/mobileDev.png",
-                title: "Mobile Development",
-                description:
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-              },
-              {
-                src: "/services/internet.png",
-                title: "Internet of Things",
-                description:
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-              },
-            ].map((service, index) => (
-              <div key={index} className="flex space-x-4 items-center">
-                <div className="w-2/5">
-                  <Image
-                    src={service.src}
-                    alt={service.title}
-                    width={400}
-                    height={300}
-                  />
-                </div>
-                <div className="w-3/5 flex flex-col">
-                  <h4 className="text-lg font-bold">{service.title}</h4>
-                  <p className="text-gray-500 text-sm w-[90%]">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
+
+      {/* Services Section */}
+      <section className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center pt-6 pb-6 py-20">
+        <div className="lg:w-1/2 max-w-6xl mx-auto px-8">
+          <h2 className="text-sm uppercase text-indigo-900">
+            <hr className="bg-indigo-900 h-0.5 w-9" />
+            Our Services
+          </h2>
+          <h1 className="text-4xl font-bold mt-2">
+            Innovative solutions for <br /> every step forward.
+          </h1>
+          <p className="text-lg text-gray-500 mt-2">
+            We provide software solutions for businesses, government, and public
+            services. Our expertise includes integration of digital devices and
+            4.0 technologies.
+          </p>
+        </div>
+
+        <div className="lg:w-1/2 grid grid-cols-1 gap-4">
+          {[
+            {
+              src: "/services/webDev.png",
+              title: "Web Development",
+              description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            },
+            {
+              src: "/services/mobileDev.png",
+              title: "Mobile Development",
+              description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            },
+            {
+              src: "/services/internet.png",
+              title: "Internet of Things",
+              description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            },
+          ].map((service, index) => (
+            <div key={index} className="flex space-x-4 items-center">
+              <div className="w-2/5">
+                <Image
+                  src={service.src}
+                  alt={service.title}
+                  width={400}
+                  height={300}
+                />
+              </div>
+              <div className="w-3/5 flex flex-col">
+                <h4 className="text-lg font-bold">{service.title}</h4>
+                <p className="text-gray-500 text-sm w-[90%]">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Products Section */}
       <div className="py-20">
         <div className="max-w-6xl mx-auto px-8">
