@@ -71,7 +71,7 @@ export default function About() {
     <div className="relative min-h-screen flex-col flex-grow">
       <div className="relative w-full h-[50vh]">
         <Image
-          src="/about/about.png"
+          src="/about/about.svg"
           alt="about Image"
           fill
           style={{ objectFit: "cover", objectPosition: "center" }}
@@ -88,7 +88,7 @@ export default function About() {
       <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
         <div className="w-[30%]">
           <Image
-            src="/about/about-picture.png"
+            src="/about/about-picture.svg"
             alt="about Image"
             width={3000}
             height={2000}
@@ -124,30 +124,28 @@ export default function About() {
           <hr className="text-white w-16 h-0.5 my-1 mx-auto" />
           <h1 className="text-white text-2xl">Vision and Mission</h1>
         </div>
-        <div className="absolute top-10 left-0 z-30 w-full h-full flex justify-center items-center">
-          <div className="absolute left-0 z-30 w-full h-full flex justify-center items-center gap-10">
-            <div className="px-10 w-1/3 h-1/2 bg-white text-center justify-center p-4">
-              <b className="text-5xl">VISION</b>
-              <hr className="w-72 bg-indigo-900 h-1 my-4 mx-auto" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
-                dolorem quisquam iste totam consectetur dolorum laudantium nulla
-                incidunt eos molestias, aliquid alias enim blanditiis laborum id
-                est voluptatum! Molestias fugit autem tempora placeat veritatis
-                facilis doloribus accusantium? Officia, ad fugit.
-              </p>
-            </div>
-            <div className="px-10 w-1/3 h-1/2 bg-white text-center justify-center p-4">
-              <b className="text-5xl">MISSION</b>
-              <hr className="w-72 bg-indigo-900 h-1 my-4 mx-auto" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
-                dolorem quisquam iste totam consectetur dolorum laudantium nulla
-                incidunt eos molestias, aliquid alias enim blanditiis laborum id
-                est voluptatum! Molestias fugit autem tempora placeat veritatis
-                facilis doloribus accusantium? Officia, ad fugit.
-              </p>
-            </div>
+        <div className="absolute top-10 left-0 z-30 w-full h-full flex justify-center items-center gap-10 flex-wrap px-4">
+          <div className="bg-white text-center p-4 w-full md:w-1/3 h-auto md:h-1/2">
+            <b className="text-3xl md:text-5xl lg:text-6xl">VISION</b>
+            <hr className="w-24 md:w-72 bg-indigo-900 h-1 my-4 mx-auto" />
+            <p className="text-sm md:text-base lg:text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
+              dolorem quisquam iste totam consectetur dolorum laudantium nulla
+              incidunt eos molestias, aliquid alias enim blanditiis laborum id
+              est voluptatum! Molestias fugit autem tempora placeat veritatis
+              facilis doloribus accusantium? Officia, ad fugit.
+            </p>
+          </div>
+          <div className="bg-white text-center p-4 w-full md:w-1/3 h-auto md:h-1/2">
+            <b className="text-3xl md:text-5xl lg:text-6xl">MISSION</b>
+            <hr className="w-24 md:w-72 bg-indigo-900 h-1 my-4 mx-auto" />
+            <p className="text-sm md:text-base lg:text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
+              dolorem quisquam iste totam consectetur dolorum laudantium nulla
+              incidunt eos molestias, aliquid alias enim blanditiis laborum id
+              est voluptatum! Molestias fugit autem tempora placeat veritatis
+              facilis doloribus accusantium? Officia, ad fugit.
+            </p>
           </div>
         </div>
       </div>
@@ -210,7 +208,7 @@ export default function About() {
             style={{ transform: `translateX(-${currentIndex * 25}%)` }}
           >
             {profile.map((card, index) => (
-              <div key={index} className="min-w-[25%] px-2">
+              <div key={index} className="min-w-[25%] px-2 text-center">
                 <Image
                   src={card.image}
                   alt={card.name}
@@ -218,41 +216,49 @@ export default function About() {
                   height={150}
                   className="w-full h-50 object-cover"
                 />
+                <p className="mt-4 font-bold text-lg">{card.name}</p>
+                <p className="text-gray-600">{card.potition}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className=" flex flex-row bg-slate-100 p-28">
-        <div>
-          <hr className="w-14 mb-2 h-1 bg-indigo-900 " />
+      <div className="flex flex-row w-full gap-7 bg-slate-100 px-16 py-28">
+        <div className="mb-12">
+          <hr className="w-14 mb-2 h-1 bg-indigo-900" />
           <p className="text-indigo-900 text-2xl">OUR EXPERIENCE</p>
           <br />
-          <p className="text-6xl">
-            <b>Building Success Through Experience</b>
+          <p className="text-4xl md:text-6xl font-bold">
+            Building Success Through Experience
           </p>
         </div>
-        <div className="w-1/2 place-content-center flex items-center gap-4">
-          <div className="w-64 border-solid border-2 py-4 border-black text-center">
-            <p className="text-8xl font-bold">20+</p>
-            <p className="text-2xl font-bold">Years of Experience</p>
-          </div>
-          <div className="h-24 border-l-2 border-black"></div>
-
-          <div className="w-64 border-solid border-2 py-4 border-black text-center">
-            <p className="text-8xl font-bold">10+</p>
-            <p className="text-2xl font-bold">Project Completed</p>
+        <div className="flex justify-center w-1/2 h-full items-center gap-4">
+          {/* Elemen 1 */}
+          <div className="flex flex-col  border-solid border-2 border-black items-center w-1/3">
+            <p className="text-6xl md:text-8xl font-bold">20+</p>
+            <p className="text-xl md:text-2xl font-bold">Years of Experience</p>
           </div>
 
           {/* Garis Vertikal */}
-          <div className="h-24 border-l-2 border-black"></div>
+          <div className="h-20 w-px bg-gray-400"></div>
 
-          <div className="w-64 border-solid border-2 py-4 border-black text-center">
-            <p className="text-8xl font-bold">15+</p>
-            <p className="text-2xl font-bold">Happy Clients</p>
+          {/* Elemen 2 */}
+          <div className="flex flex-col border-solid border-2 border-black items-center w-1/3">
+            <p className="text-6xl md:text-8xl font-bold">10+</p>
+            <p className="text-xl md:text-2xl font-bold">Project Completed</p>
+          </div>
+
+          {/* Garis Vertikal */}
+          <div className="h-20 w-px bg-gray-400"></div>
+
+          {/* Elemen 3 */}
+          <div className="flex flex-col border-solid border-2 border-black items-center w-1/3">
+            <p className="text-6xl md:text-8xl font-bold">15+</p>
+            <p className="text-xl md:text-2xl font-bold">Happy Clients</p>
           </div>
         </div>
       </div>
+
       <div className="flex flex-row gap-32 m-28">
         <div className="w-1/2 flex items-center justify-center">
           <iframe
