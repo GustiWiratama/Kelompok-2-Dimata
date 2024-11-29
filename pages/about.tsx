@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import Navbar from "./component/navbar";
-import Footer from "./component/footer";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import Footer from "./component/footer";
+import Navbar from "./component/navbar";
 
 export default function About() {
   const profile = [
@@ -82,7 +82,7 @@ export default function About() {
           <Navbar />
         </div>
         <div className="absolute inset-0 z-10 flex justify-center items-center">
-          <h1 className="text-5xl font-semibold text-white">ABOUT US</h1>
+          <h1 className="text-5xl font-semibold text-white mt-10">ABOUT US</h1>
         </div>
       </div>
       <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
