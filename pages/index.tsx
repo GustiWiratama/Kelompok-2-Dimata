@@ -106,7 +106,7 @@ export default function Home() {
               "Transform your business with our innovative information systems"
             </p>
             <a
-              href="https://web.whatsapp.com/"
+              href="https://wa.me/+6285737454512/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-orange-500 bg-opacity-70 text-white py-3 px-6 hover:bg-orange-600 transition"
@@ -156,12 +156,13 @@ export default function Home() {
 
               {/* Conditionally render Next or Read More button */}
               {aboutIndex === aboutSlides.length - 1 ? (
-                <button
-                  className="w-32 h-12 bg-orange-500 text-white hover:bg-orange-600 transition"
+                <a
+                  href="/about"
+                  className="w-32 h-12 bg-orange-500 text-center py-3 text-white hover:bg-orange-600 transition"
                   onClick={handleReadMore}
                 >
                   Read More
-                </button>
+                </a>
               ) : (
                 <button
                   className="w-32 h-12 bg-blue-800 text-white hover:bg-blue-700 transition"
@@ -246,9 +247,12 @@ export default function Home() {
               Empowering your success with every <br />
               product.
             </h1>
-            <button className="w-32 h-12 bg-blue-800 text-white hover:bg-gray-700">
+            <a
+              href="/products"
+              className="w-32 h-12 bg-blue-800 text-center py-3 text-white hover:bg-gray-700"
+            >
               See All
-            </button>
+            </a>
           </div>
           <p className="text-lg text-gray-600 mb-8">
             Discover our range of innovative products designed to meet your
@@ -381,9 +385,12 @@ export default function Home() {
               <h1 className="text-4xl font-bold text-black my-5 leading-tight">
                 Transforming ideas into impactful solutions for our clients.
               </h1>
-              <button className="w-32 h-12 bg-blue-800 text-white hover:bg-gray-700 ">
+              <a
+                href="/projects"
+                className="w-32 h-12 bg-blue-800 text-center py-3 text-white hover:bg-gray-700 "
+              >
                 See All
-              </button>
+              </a>
             </div>
           </div>
 
@@ -504,8 +511,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="flex pt-16 md:pt-32 font-sans">
-        <div className="flex flex-col lg:flex-row lg:p-32 p-5 justify-between items-center bg-[url('/image/testibg.png')] w-full h-[50vh] lg:h-[90vh] bg-cover bg-center">
+      <div className="flex pt-16 md:pt-32 font-sans ">
+        <div className="flex flex-col lg:flex-row lg:p-32 lg:py-1 p-5 justify-evenly items-center bg-[url('/image/testibg.png')] w-full h-[50vh] lg:h-[90vh] bg-cover bg-center">
           <div className="flex flex-col items-center lg:items-start justify-start text-white gap-3">
             <h1 className="text-xl md:text-2xl italic font-medium">
               TESTIMONIAL
@@ -513,6 +520,48 @@ export default function Home() {
             <h1 className="text-2xl md:text-4xl font-bold">
               What They Say About Us
             </h1>
+            <div className="form flex flex-col text-center items-center  w-2/4 scale-75">
+              <h3 className="text-2xl font-bold text-white m-3">Contact Us!</h3>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className=""
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="28286ded-8ab6-4785-9613-4860c21083c4"
+                ></input>
+                <input
+                  className="border border-gray-300 p-2 rounded-md w-full m-2"
+                  type="text"
+                  name="name"
+                  placeholder="Enter Your Name"
+                  required
+                />
+                <input
+                  className="border border-gray-300 p-2 rounded-md w-full m-2"
+                  type="email"
+                  name="email"
+                  placeholder="Enter your Email"
+                  required
+                />
+
+                <textarea
+                  className="border border-gray-300 p-2 rounded-md w-full m-2"
+                  name="message"
+                  placeholder="Message Here"
+                  required
+                ></textarea>
+
+                <button
+                  className="bg-orange-500 text-white p-2 m-2 w-full rounded-md"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
 
           <div className="flex flex-col p-5 gap-5 bg-white w-full max-w-lg lg:max-w-md shadow-lg rounded-lg">

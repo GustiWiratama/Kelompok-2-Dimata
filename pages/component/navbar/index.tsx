@@ -88,7 +88,9 @@ const Navbar = () => {
                       : "hover:text-orange-500"
                   }`}
                 >
-                  <Link href="/contact">Contact</Link>
+                  <Link href="https://wa.me/+6285737454512/" target="_blank">
+                    Contact
+                  </Link>
                 </li>
                 <li className="px-4 py-2 flex text-center items-center justify-center bg-orange-500 bg-opacity-70 cursor-pointer">
                   Login
@@ -150,7 +152,9 @@ const Navbar = () => {
                     : "hover:text-orange-500"
                 }`}
               >
-                <Link href="/contact">Contact</Link>
+                <Link href="https://wa.me/+6285737454512/" target="_blank">
+                  Contact
+                </Link>
               </li>
               <li className="pl-6 pr-6 flex text-center items-center justify-center bg-orange-500 bg-opacity-70 h-10 cursor-pointer hover:scale-105 transition duration-100">
                 Login
