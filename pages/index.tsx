@@ -533,14 +533,14 @@ export default function Home() {
                   value="28286ded-8ab6-4785-9613-4860c21083c4"
                 ></input>
                 <input
-                  className="border border-gray-300 p-2 rounded-md w-full m-2"
+                  className=" text-black p-2 rounded-md w-full m-2"
                   type="text"
                   name="name"
                   placeholder="Enter Your Name"
                   required
                 />
                 <input
-                  className="border border-gray-300 p-2 rounded-md w-full m-2"
+                  className=" text-black p-2 rounded-md w-full m-2"
                   type="email"
                   name="email"
                   placeholder="Enter your Email"
@@ -548,7 +548,7 @@ export default function Home() {
                 />
 
                 <textarea
-                  className="border border-gray-300 p-2 rounded-md w-full m-2"
+                  className=" text-black p-2 rounded-md w-full m-2"
                   name="message"
                   placeholder="Message Here"
                   required
