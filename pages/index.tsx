@@ -52,14 +52,14 @@ export default function Home() {
   const aboutSlides = [
     {
       title: "William John Doe.",
-      sectionName: "OUR DIRECTOR", // Nama untuk slide pertama
+      sectionName: "OUR DIRECTOR",
       description:
-        "William John Doe is the visionary leader of Dimata IT Solutions, which he founded in 2002. With over 20 years in the IT sector, he drives innovation that enhances client efficiency across various industries. His commitment to accessible technology and a creative workplace has established Dimata as a leader in the tech field..",
+        "William John Doe is the visionary leader of Dimata IT Solutions, which he founded in 2002. With over 20 years in the IT sector, he drives innovation that enhances client efficiency across various industries. His commitment to accessible technology and a creative workplace has established Dimata as a leader in the tech field.",
       imageUrl: "/about/about picture (1).svg",
     },
     {
       title: "Turning visions into reality.",
-      sectionName: "OUR SERVICE", // Nama untuk slide kedua
+      sectionName: "OUR SERVICE",
       description:
         "Dimata IT Solutions was founded in 2002 with a vision to develop smart information systems using the latest technologies. We have successfully delivered software solutions for various industries.",
       imageUrl: "/about/Group 43 (1).svg",
@@ -67,6 +67,7 @@ export default function Home() {
   ];
 
   const [aboutIndex, setAboutIndex] = useState(0);
+  const [showFullDescription, setShowFullDescription] = useState(false);
 
   const handleAboutNext = () => {
     if (aboutIndex < aboutSlides.length - 1) {
@@ -74,11 +75,17 @@ export default function Home() {
     }
   };
 
-  function handleAboutPrevious() {
+  const handleAboutPrevious = () => {
     setAboutIndex(
       (prev) => (prev - 1 + aboutSlides.length) % aboutSlides.length
     );
-  }
+  };
+
+  const handleReadMore = () => {
+    setShowFullDescription(true);
+  };
+
+  const currentSlide = aboutSlides[aboutIndex];
 
   return (
     <>
@@ -115,8 +122,6 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-10 m-10 justify-center items-center relative z-20 bg-white text-black p-10">
           <div className="w-full md:w-1/2 mx-auto px-5">
             <div className="relative w-full h-500">
-              {" "}
-              {/* Fixed height for consistency */}
               <Image
                 src={aboutSlides[aboutIndex].imageUrl}
                 alt={`About Image ${aboutIndex + 1}`}
@@ -140,7 +145,7 @@ export default function Home() {
             <p className="w-full text-sm mb-5 leading-loose">
               {aboutSlides[aboutIndex].description}
             </p>
-            <div className="flex justify-between">
+            <div className="flex justify-start gap-4">
               <button
                 className="w-32 h-12 bg-blue-800 text-white hover:bg-blue-700 transition disabled:opacity-50"
                 onClick={handleAboutPrevious}
@@ -148,17 +153,24 @@ export default function Home() {
               >
                 Previous
               </button>
-              <button
-                className={`w-32 h-12 bg-blue-800 text-white hover:bg-blue-700 transition ${
-                  aboutIndex === aboutSlides.length - 1
-                    ? "opacity-50 cursor-not-allowed"
-                    : ""
-                }`}
-                onClick={handleAboutNext}
-                disabled={aboutIndex === aboutSlides.length - 1}
-              >
-                Next
-              </button>
+
+              {/* Conditionally render Next or Read More button */}
+              {aboutIndex === aboutSlides.length - 1 ? (
+                <button
+                  className="w-32 h-12 bg-orange-500 text-white hover:bg-orange-600 transition"
+                  onClick={handleReadMore}
+                >
+                  Read More
+                </button>
+              ) : (
+                <button
+                  className="w-32 h-12 bg-blue-800 text-white hover:bg-blue-700 transition"
+                  onClick={handleAboutNext}
+                  disabled={aboutIndex === aboutSlides.length - 1}
+                >
+                  Next
+                </button>
+              )}
             </div>
           </div>
         </div>
