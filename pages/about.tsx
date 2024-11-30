@@ -86,18 +86,18 @@ export default function About() {
         </div>
       </div>
       <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
-        <div className="w-[30%]">
+        <div className="w-1/2  flex justify-center">
           <Image
             src="/about/about-picture.svg"
             alt="about Image"
-            width={3000}
-            height={2000}
+            width={700}
+            height={5000}
             quality={100}
             priority
           />
         </div>
         <hr />
-        <div className="flex flex-col max-w-2xl">
+        <div className="flex flex-col max-w-2xl w-1/2">
           <hr className="w-9 bg-indigo-900 h-1 mb-2" />
           <span className="text-xl text-indigo-900 font-medium">OUR STORY</span>
           <h1 className="text-5xl font-bold font-sans">
@@ -126,25 +126,25 @@ export default function About() {
         </div>
         <div className="absolute top-10 left-0 z-30 w-full h-full flex justify-center items-center gap-10 flex-wrap px-4">
           <div className="bg-white text-center p-4 w-full md:w-1/3 h-auto md:h-1/2">
-            <b className="text-3xl md:text-5xl lg:text-6xl">VISION</b>
+            <b className="text-xl md:text-2xl lg:text-3xl">VISION</b>
             <hr className="w-24 md:w-72 bg-indigo-900 h-1 my-4 mx-auto" />
-            <p className="text-sm md:text-base lg:text-lg">
+            <p className="">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
               dolorem quisquam iste totam consectetur dolorum laudantium nulla
               incidunt eos molestias, aliquid alias enim blanditiis laborum id
               est voluptatum! Molestias fugit autem tempora placeat veritatis
-              facilis doloribus accusantium? Officia, ad fugit.
+              facilis doloribus accusantium? Officia
             </p>
           </div>
           <div className="bg-white text-center p-4 w-full md:w-1/3 h-auto md:h-1/2">
-            <b className="text-3xl md:text-5xl lg:text-6xl">MISSION</b>
+            <b className="text-1xl md:text-2xl lg:text-3xl">MISSION</b>
             <hr className="w-24 md:w-72 bg-indigo-900 h-1 my-4 mx-auto" />
-            <p className="text-sm md:text-base lg:text-lg">
+            <p className="">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
               dolorem quisquam iste totam consectetur dolorum laudantium nulla
               incidunt eos molestias, aliquid alias enim blanditiis laborum id
               est voluptatum! Molestias fugit autem tempora placeat veritatis
-              facilis doloribus accusantium? Officia, ad fugit.
+              facilis doloribus accusantium? Officia
             </p>
           </div>
         </div>
@@ -208,13 +208,13 @@ export default function About() {
             style={{ transform: `translateX(-${currentIndex * 25}%)` }}
           >
             {profile.map((card, index) => (
-              <div key={index} className="min-w-[25%] px-2 text-center">
+              <div key={index} className=" min-w-[25%] px-2 text-center">
                 <Image
                   src={card.image}
                   alt={card.name}
                   width={350}
                   height={150}
-                  className="w-full h-50 object-cover"
+                  className="w-full h-50 object-cover  shadow-md overflow-hidden transition-transform duration-200 hover:scale-105"
                 />
                 <p className="mt-4 font-bold text-lg">{card.name}</p>
                 <p className="text-gray-600">{card.potition}</p>
@@ -223,43 +223,45 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row w-full gap-7 bg-slate-100 px-16 py-28">
-        <div className="mb-12">
+      <div className="flex flex-row w-full gap-2 bg-slate-100 justify-center  items-center px-16 py-28">
+        <div className="mb-12 w-1/2">
           <hr className="w-14 mb-2 h-1 bg-indigo-900" />
           <p className="text-indigo-900 text-2xl">OUR EXPERIENCE</p>
           <br />
-          <p className="text-4xl md:text-6xl font-bold">
+          <p className="text-4xl md:text-4xl font-bold">
             Building Success Through Experience
           </p>
         </div>
-        <div className="flex justify-center w-1/2 h-full items-center gap-4">
+        <div className="flex justify-center w-1/2  h-full content-center gap-4">
           {/* Elemen 1 */}
-          <div className="flex flex-col  border-solid border-2 border-black items-center w-1/3">
-            <p className="text-6xl md:text-8xl font-bold">20+</p>
-            <p className="text-xl md:text-2xl font-bold">Years of Experience</p>
+          <div className="flex flex-col  border-solid border-2 py-3 border-black items-center w-1/3">
+            <p className="text-6xl md:text-6xl font-bold">20+</p>
+            <p className="text-xl md:text-base font-bold">
+              Years of Experience
+            </p>
           </div>
 
           {/* Garis Vertikal */}
-          <div className="h-20 w-px bg-gray-400"></div>
+          <div className="h-28 w-px bg-gray-400"></div>
 
           {/* Elemen 2 */}
-          <div className="flex flex-col border-solid border-2 border-black items-center w-1/3">
-            <p className="text-6xl md:text-8xl font-bold">10+</p>
-            <p className="text-xl md:text-2xl font-bold">Project Completed</p>
+          <div className="flex flex-col border-solid border-2 py-3 border-black items-center w-1/3">
+            <p className="text-6xl md:text-6xl font-bold">10+</p>
+            <p className="text-xl md:text-base font-bold">Project Completed</p>
           </div>
 
           {/* Garis Vertikal */}
-          <div className="h-20 w-px bg-gray-400"></div>
+          <div className="h-28 w-px bg-gray-400"></div>
 
           {/* Elemen 3 */}
-          <div className="flex flex-col border-solid border-2 border-black items-center w-1/3">
-            <p className="text-6xl md:text-8xl font-bold">15+</p>
-            <p className="text-xl md:text-2xl font-bold">Happy Clients</p>
+          <div className="flex flex-col border-solid border-2 py-3 border-black items-center w-1/3">
+            <p className="text-6xl md:text-6xl font-bold">15+</p>
+            <p className="text-xl md:text-base font-bold">Happy Clients</p>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-row gap-32 m-28">
+      <div className="flex flex-row gap-16 m-28">
         <div className="w-1/2 flex items-center justify-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.846030212877!2d115.23796897589622!3d-8.706167791342807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241bfead42cb1%3A0x24c6e2d6d2d87689!2sDimata%20IT%20and%20Software!5e0!3m2!1sid!2sid!4v1730960400785!5m2!1sid!2sid"
@@ -271,11 +273,11 @@ export default function About() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-        <div className="max-w-3xl place-content-center p-16">
+        <div className="max-w-3xl place-content-center w-1/2 p-6">
           <hr className="w-20 mb-2 h-1 bg-indigo-900" />
           <p className="text-indigo-900 text-2xl">OUR OFFICE</p>
           <br />
-          <p className="text-6xl">
+          <p className="text-4xl">
             <b>Where Innovation Happens</b>
           </p>
           <br />
