@@ -10,7 +10,7 @@ export default function Home() {
       id: 1,
       name: "Saraswati",
       role: "Client",
-      message: "Lorem Ipsum is simply dummy text of the printing.",
+      message: "Great service and support. Highly recommend!",
       imageUrl: "/image/woman.png",
     },
     {
@@ -187,7 +187,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold mt-2">
             Innovative solutions for <br /> every step forward.
           </h1>
-          <p className="text-lg text-gray-500 mt-2">
+          <p className="text-lg  mt-2">
             We provide software solutions for businesses, government, and public
             services. Our expertise includes integration of digital devices and
             4.0 technologies.
@@ -226,9 +226,7 @@ export default function Home() {
               </div>
               <div className="w-3/5 flex flex-col">
                 <h4 className="text-lg font-bold">{service.title}</h4>
-                <p className="text-gray-500 text-sm w-[90%]">
-                  {service.description}
-                </p>
+                <p className=" text-sm w-[90%]">{service.description}</p>
               </div>
             </div>
           ))}
@@ -254,7 +252,7 @@ export default function Home() {
               See All
             </a>
           </div>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg  mb-8">
             Discover our range of innovative products designed to meet your
             needs.
           </p>
@@ -288,7 +286,7 @@ export default function Home() {
               </span>
               <h2 className="text-3xl font-bold  mt-5">Why Choose Us?</h2>
             </div>
-            <div className="text-gray-600 ml-48 mt-1 text-right max-w-lg">
+            <div className=" ml-48 mt-1 text-right max-w-lg">
               Experience our unmatched expertise and dedication to delivering
               exceptional results, tailored to meet your unique needs.
             </div>
@@ -309,7 +307,7 @@ export default function Home() {
               <h3 className="font-semibold text-xl mb-2">
                 Expertise and Innovation
               </h3>
-              <p className="text-gray-600">
+              <p className="">
                 Our team comprises industry experts who leverage the latest
                 technologies to create innovative software solutions tailored to
                 your needs.
@@ -329,7 +327,7 @@ export default function Home() {
               <h3 className="font-semibold text-xl mb-2">
                 Client-Centric Approach
               </h3>
-              <p className="text-gray-600">
+              <p className="">
                 We prioritize your goals by working closely with you throughout
                 the development process, ensuring that our solutions align
                 perfectly with your vision.
@@ -349,7 +347,7 @@ export default function Home() {
               <h3 className="font-semibold text-xl mb-2">
                 Client-Centric Approach
               </h3>
-              <p className="text-gray-600">
+              <p className="">
                 Our software solutions are designed to grow with your business,
                 ensuring long-term reliability and scalability.
               </p>
@@ -504,7 +502,7 @@ export default function Home() {
                     className=" transition-transform transform hidden group-open:block w-7 h-5"
                   />
                 </summary>
-                <div className="p-5 bg-white text-gray-600">{faq.answer}</div>
+                <div className="p-5 bg-white ">{faq.answer}</div>
               </details>
             ))}
           </div>
@@ -520,7 +518,7 @@ export default function Home() {
             <h1 className="text-2xl md:text-4xl font-bold">
               What They Say About Us
             </h1>
-            <div className="form flex flex-col text-center items-center  w-2/4 scale-75">
+            <div className="form flex flex-col text-center items-center w-2/4 scale-75">
               <h3 className="text-2xl font-bold text-white m-3">
                 Leave Your Review!
               </h3>
@@ -557,7 +555,7 @@ export default function Home() {
                 ></textarea>
 
                 <button
-                  className="bg-orange-500 text-white p-2 m-2 w-24 rounded-md"
+                  className="bg-orange-500 text-white p-2 m-2 w-full hover:bg-orange-600 rounded-md"
                   type="submit"
                 >
                   Submit
