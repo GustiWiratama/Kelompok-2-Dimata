@@ -521,7 +521,9 @@ export default function Home() {
               What They Say About Us
             </h1>
             <div className="form flex flex-col text-center items-center  w-2/4 scale-75">
-              <h3 className="text-2xl font-bold text-white m-3">Contact Us!</h3>
+              <h3 className="text-2xl font-bold text-white m-3">
+                Leave Your Review!
+              </h3>
               <form
                 action="https://api.web3forms.com/submit"
                 method="POST"
@@ -555,7 +557,7 @@ export default function Home() {
                 ></textarea>
 
                 <button
-                  className="bg-orange-500 text-white p-2 m-2 w-full rounded-md"
+                  className="bg-orange-500 text-white p-2 m-2 w-24 rounded-md"
                   type="submit"
                 >
                   Submit
