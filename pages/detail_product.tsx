@@ -7,7 +7,7 @@ export default function detailProduct() {
     <div className="relative">
       <div className="relative w-full h-[50vh]">
         <Image
-          src="/DetailProduct.png"
+          src="/detail_product.svg"
           alt="Detail Content"
           layout="fill"
           objectFit="cover"
@@ -26,7 +26,7 @@ export default function detailProduct() {
       <div className="gap-20 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
         <div className="ml-20 mt-28">
           <Image
-            src="/about product.png"
+            src="/Image about product.svg"
             alt="about product"
             width={3000}
             height={1500}
@@ -62,7 +62,11 @@ export default function detailProduct() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 m-20">
         <div className="mb-2">
-          <img src="/ai icon.png" alt="ai icon" className="" />
+          <img
+            src="/hugeicons_ai-innovation-01.svg"
+            alt="ai icon"
+            className=""
+          />
           <br />
           <p className="font-bold">Expertise and Innovation</p>
           <p>
@@ -72,7 +76,11 @@ export default function detailProduct() {
           </p>
         </div>
         <div className="mb-8">
-          <img src="/ai icon.png" alt="ai icon" className="" />
+          <img
+            src="/hugeicons_ai-innovation-01.svg"
+            alt="ai icon"
+            className=""
+          />
           <br />
           <p className="font-bold">Expertise and Innovation</p>
           <p>
@@ -82,7 +90,11 @@ export default function detailProduct() {
           </p>
         </div>
         <div className="mb-8">
-          <img src="/ai icon.png" alt="ai icon" className="" />
+          <img
+            src="/hugeicons_ai-innovation-01.svg"
+            alt="ai icon"
+            className=""
+          />
           <br />
           <p className="font-bold">Expertise and Innovation</p>
           <p>
@@ -92,7 +104,11 @@ export default function detailProduct() {
           </p>
         </div>
         <div>
-          <img src="/ai icon.png" alt="ai icon" className="" />
+          <img
+            src="/hugeicons_ai-innovation-01.svg"
+            alt="ai icon"
+            className=""
+          />
           <br />
           <p className="font-bold">Expertise and Innovation</p>
           <p>
@@ -102,7 +118,11 @@ export default function detailProduct() {
           </p>
         </div>
         <div>
-          <img src="/ai icon.png" alt="ai icon" className="" />
+          <img
+            src="/hugeicons_ai-innovation-01.svg"
+            alt="ai icon"
+            className=""
+          />
           <br />
           <p className="font-bold">Expertise and Innovation</p>
           <p>
@@ -112,7 +132,11 @@ export default function detailProduct() {
           </p>
         </div>
         <div>
-          <img src="/ai icon.png" alt="ai icon" className="" />
+          <img
+            src="/hugeicons_ai-innovation-01.svg"
+            alt="ai icon"
+            className=""
+          />
           <br />
           <p className="font-bold">Expertise and Innovation</p>
           <p>

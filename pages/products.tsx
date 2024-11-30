@@ -9,49 +9,49 @@ export default function Product() {
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
     {
       title: "ProChain",
       link: "/detail_product",
-      image: "/Content1.png",
+      image: "/contentt.svg",
     },
   ];
   return (
     <div className="relative">
       <div className="relative w-full h-[50vh]">
         <Image
-          src="/Products.png"
+          src="/product.svg"
           alt="Product Picture"
           layout="fill"
           objectFit="cover"
