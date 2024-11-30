@@ -132,8 +132,7 @@ export default function About() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
               dolorem quisquam iste totam consectetur dolorum laudantium nulla
               incidunt eos molestias, aliquid alias enim blanditiis laborum id
-              est voluptatum! Molestias fugit autem tempora placeat veritatis
-              facilis doloribus accusantium? Officia
+              est voluptatum!
             </p>
           </div>
           <div className="bg-white text-center p-4 w-full md:w-1/3 h-auto md:h-1/2">
@@ -143,8 +142,7 @@ export default function About() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
               dolorem quisquam iste totam consectetur dolorum laudantium nulla
               incidunt eos molestias, aliquid alias enim blanditiis laborum id
-              est voluptatum! Molestias fugit autem tempora placeat veritatis
-              facilis doloribus accusantium? Officia
+              est voluptatum!
             </p>
           </div>
         </div>
