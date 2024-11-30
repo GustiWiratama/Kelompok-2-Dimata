@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Navbar from "./component/navbar";
 import Footer from "./component/footer";
+import Navbar from "./component/navbar";
 
 export default function detailProduct() {
   return (
@@ -20,7 +20,7 @@ export default function detailProduct() {
           <Navbar />
         </div>
         <div className="absolute inset-0 z-10 flex justify-center items-center">
-          <h1 className="text-6xl text-white font-semibold mt-10">PROCHAIN</h1>
+          <h1 className="text-5xl font-semibold text-white mt-10">PROCHAIN</h1>
         </div>
       </div>
       <div className="gap-20 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
