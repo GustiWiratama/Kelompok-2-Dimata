@@ -8,7 +8,7 @@ export default function Projects() {
     <div className="relative">
       <div className="relative w-full h-[50vh]">
         <Image
-          src="/nav-img.png"
+          src="/new-prjct.svg"
           alt="projects Image"
           layout="fill"
           objectFit="cover"
@@ -41,7 +41,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0">
           <div className="relative">
             <Image
-              src="/project1.png"
+              src="/poject1.svg"
               alt="project Image"
               width={2000}
               height={1000}
@@ -76,7 +76,7 @@ export default function Projects() {
           </div>
           <div className="relative">
             <Image
-              src="/project2.png"
+              src="/poject2.svg"
               alt="project Image"
               width={2000}
               height={1000}
@@ -87,7 +87,7 @@ export default function Projects() {
 
           <div className="relative">
             <Image
-              src="/project3.png"
+              src="/poject3.svg"
               alt="project Image"
               width={2000}
               height={1000}
