@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import CountUp from "react-countup"; // Import CountUp library
 import Footer from "./component/footer";
 import Navbar from "./component/navbar";
 
@@ -45,14 +46,37 @@ export default function About() {
       potition: "director",
       image: "/about/image-20.png",
     },
-    // Other profile items...
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
+  const [hasScrolledIntoView, setHasScrolledIntoView] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setHasScrolledIntoView(false);
+            setTimeout(() => {
+              setHasScrolledIntoView(true);
+            }, 100);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const target = document.querySelector("#experience-section");
+    if (target) observer.observe(target);
+
+    return () => {
+      if (target) observer.unobserve(target);
+    };
   }, []);
 
   const handleNext = () => {
@@ -223,75 +247,94 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row w-full gap-2 bg-slate-100 justify-center  items-center px-16 py-28">
-        <div className="mb-12 w-1/2">
-          <hr className="w-14 mb-2 h-1 bg-indigo-900" />
-          <p className="text-indigo-900 text-2xl">OUR EXPERIENCE</p>
-          <br />
-          <p className="text-4xl md:text-4xl font-bold">
-            Building Success Through Experience
-          </p>
-        </div>
-        <div className="flex justify-center w-1/2  h-full content-center gap-4">
-          {/* Elemen 1 */}
-          <div className="flex flex-col  border-solid border-2 py-3 border-black items-center w-1/3">
-            <p className="text-6xl md:text-6xl font-bold">20+</p>
-            <p className="text-xl md:text-base font-bold">
-              Years of Experience
+      <div className="relative min-h-screen flex-col flex-grow">
+        <div
+          id="experience-section"
+          className="flex flex-row w-full gap-2 bg-slate-100 justify-center items-center px-16 py-28"
+        >
+          <div className="mb-12 w-1/2">
+            <hr className="w-14 mb-2 h-1 bg-indigo-900" />
+            <p className="text-indigo-900 text-2xl">OUR EXPERIENCE</p>
+            <br />
+            <p className="text-4xl md:text-4xl font-bold">
+              Building Success Through Experience
             </p>
           </div>
+          <div className="flex justify-center w-1/2 h-full content-center gap-4">
+            {/* Elemen 1 */}
+            <div className="flex flex-col border-solid border-2 py-3 border-black items-center w-1/3">
+              <p className="text-6xl md:text-6xl font-bold">
+                {hasScrolledIntoView && (
+                  <CountUp start={0} end={20} duration={2} suffix="+" />
+                )}
+              </p>
+              <p className="text-xl md:text-base font-bold">
+                Years of Experience
+              </p>
+            </div>
 
-          {/* Garis Vertikal */}
-          <div className="h-28 w-px bg-gray-400"></div>
+            {/* Garis Vertikal */}
+            <div className="h-28 w-px bg-gray-400"></div>
 
-          {/* Elemen 2 */}
-          <div className="flex flex-col border-solid border-2 py-3 border-black items-center w-1/3">
-            <p className="text-6xl md:text-6xl font-bold">10+</p>
-            <p className="text-xl md:text-base font-bold">Project Completed</p>
+            {/* Elemen 2 */}
+            <div className="flex flex-col border-solid border-2 py-3 border-black items-center w-1/3">
+              <p className="text-6xl md:text-6xl font-bold">
+                {hasScrolledIntoView && (
+                  <CountUp start={0} end={10} duration={2} suffix="+" />
+                )}
+              </p>
+              <p className="text-xl md:text-base font-bold">
+                Project Completed
+              </p>
+            </div>
+
+            {/* Garis Vertikal */}
+            <div className="h-28 w-px bg-gray-400"></div>
+
+            {/* Elemen 3 */}
+            <div className="flex flex-col border-solid border-2 py-3 border-black items-center w-1/3">
+              <p className="text-6xl md:text-6xl font-bold">
+                {hasScrolledIntoView && (
+                  <CountUp start={0} end={15} duration={2} suffix="+" />
+                )}
+              </p>
+              <p className="text-xl md:text-base font-bold">Happy Clients</p>
+            </div>
           </div>
+        </div>
 
-          {/* Garis Vertikal */}
-          <div className="h-28 w-px bg-gray-400"></div>
-
-          {/* Elemen 3 */}
-          <div className="flex flex-col border-solid border-2 py-3 border-black items-center w-1/3">
-            <p className="text-6xl md:text-6xl font-bold">15+</p>
-            <p className="text-xl md:text-base font-bold">Happy Clients</p>
+        <div className="flex flex-row gap-16 m-28">
+          <div className="w-1/2 flex items-center justify-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.846030212877!2d115.23796897589622!3d-8.706167791342807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241bfead42cb1%3A0x24c6e2d6d2d87689!2sDimata%20IT%20and%20Software!5e0!3m2!1sid!2sid!4v1730960400785!5m2!1sid!2sid"
+              width="550"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="max-w-3xl place-content-center w-1/2 p-6">
+            <hr className="w-20 mb-2 h-1 bg-indigo-900" />
+            <p className="text-indigo-900 text-2xl">OUR OFFICE</p>
+            <br />
+            <p className="text-4xl">
+              <b>Where Innovation Happens</b>
+            </p>
+            <br />
+            <p>
+              A space built to drive progress and foster creativity. Our modern,
+              tech-forward office reflects our commitment to cutting-edge
+              solutions and provides the ideal environment for innovation and
+              collaboration.
+            </p>
           </div>
         </div>
-      </div>
+        <div></div>
 
-      <div className="flex flex-row gap-16 m-28">
-        <div className="w-1/2 flex items-center justify-center">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.846030212877!2d115.23796897589622!3d-8.706167791342807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241bfead42cb1%3A0x24c6e2d6d2d87689!2sDimata%20IT%20and%20Software!5e0!3m2!1sid!2sid!4v1730960400785!5m2!1sid!2sid"
-            width="550"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
-        <div className="max-w-3xl place-content-center w-1/2 p-6">
-          <hr className="w-20 mb-2 h-1 bg-indigo-900" />
-          <p className="text-indigo-900 text-2xl">OUR OFFICE</p>
-          <br />
-          <p className="text-4xl">
-            <b>Where Innovation Happens</b>
-          </p>
-          <br />
-          <p>
-            A space built to drive progress and foster creativity. Our modern,
-            tech-forward office reflects our commitment to cutting-edge
-            solutions and provides the ideal environment for innovation and
-            collaboration.
-          </p>
-        </div>
+        <Footer />
       </div>
-      <div></div>
-
-      <Footer />
     </div>
   );
 }
