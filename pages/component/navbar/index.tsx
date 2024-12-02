@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -13,9 +14,29 @@ const Navbar = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > window.innerHeight / 2) {
+      // 100vh bagi 2 = 50vh
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      <nav className="flex w-full justify-between p-10 px-10 sm:px-28 text-xl items-center bg-transparent text-white">
+      <nav
+        className={`z-50 flex fixed w-full justify-between p-5 px-10 sm:px-28 text-xl items-center text-white transition-all duration-300 ${
+          isScrolled ? "bg-black bg-opacity-70" : "bg-transparent"
+        } text-white`}
+      >
         <Link href="/">
           <div className="title cursor-pointer w-2/5">
             <Image

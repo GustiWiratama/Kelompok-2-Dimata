@@ -119,7 +119,7 @@ export default function Home() {
 
       <div className="container mx-auto pb-8">
         {/* About Section */}
-        <div className="flex flex-col md:flex-row gap-10 m-10 justify-center items-center relative z-20 bg-white text-black p-10">
+        <div className="flex flex-col md:flex-row gap-10 m-10 justify-center items-center relative  bg-white text-black p-10">
           <div className="w-full md:w-1/2 mx-auto px-5">
             <div className="relative w-full h-500">
               <Image
