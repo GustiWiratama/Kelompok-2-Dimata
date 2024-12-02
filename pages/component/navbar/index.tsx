@@ -92,9 +92,12 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="px-4 py-2 flex text-center items-center justify-center bg-orange-500 bg-opacity-70 cursor-pointer">
+                <a
+                  href="/login"
+                  className="px-4 py-2 flex text-center items-center justify-center bg-orange-500 bg-opacity-70 cursor-pointer"
+                >
                   Login
-                </li>
+                </a>
               </ul>
             </div>
           )}
