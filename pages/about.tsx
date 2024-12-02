@@ -109,7 +109,7 @@ export default function About() {
           <h1 className="text-5xl font-semibold text-white mt-10">ABOUT US</h1>
         </div>
       </div>
-      <div className="gap-20 m-10 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
+      <div className="gap-20 m-10 justify-center items-center relative bg-white text-black p-10 flex flex-row">
         <div className="w-1/2  flex justify-center">
           <Image
             src="/about/about-picture.svg"
@@ -144,11 +144,11 @@ export default function About() {
           quality={100}
           priority
         />
-        <div className="absolute m-20 z-30 flex flex-col justify-center text-center">
+        <div className="absolute m-20  flex flex-col justify-center text-center">
           <hr className="text-white w-16 h-0.5 my-1 mx-auto" />
           <h1 className="text-white text-2xl">Vision and Mission</h1>
         </div>
-        <div className="absolute top-10 left-0 z-30 w-full h-full flex justify-center items-center gap-10 flex-wrap px-4">
+        <div className="absolute top-10 left-0  w-full h-full flex justify-center items-center gap-10 flex-wrap px-4">
           <div className="bg-white text-center p-4 w-full md:w-1/3 h-auto md:h-1/2">
             <b className="text-xl md:text-2xl lg:text-3xl">VISION</b>
             <hr className="w-24 md:w-72 bg-indigo-900 h-1 my-4 mx-auto" />
