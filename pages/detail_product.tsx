@@ -23,7 +23,7 @@ export default function detailProduct() {
           <h1 className="text-5xl font-semibold text-white mt-10">PROCHAIN</h1>
         </div>
       </div>
-      <div className="gap-20 justify-center items-center relative z-20 bg-white text-black p-10 flex flex-row">
+      <div className="gap-20 justify-center items-center relative  bg-white text-black p-10 flex flex-row">
         <div className="ml-20 mt-28">
           <Image
             src="/Image about product.svg"
